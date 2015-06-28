@@ -56,57 +56,207 @@
 							<div class="container">
 								<!-- Top Navigation -->
 								<section>
-
-
 										<div class="content-wrap" style = "background-color: white !important; padding: 20px; padding-top: 10px;">
 											<h1 style = "margin:0px">Inventory</h1>
-												<div class="content" style = "display: inline-block;">
-
-								                <form id="ui_element" class="sb_wrapper" style = "display: inline-block;">
-								                    <p>
-														<input class="sb_input" type="text"/>
-														<input class="sb_search" type="submit" value=""/>
-													</p>
-								                </form>
+											<div>
+												<div class="content">
+								            <form id="ui_element" class="sb_wrapper" style = "display: inline;float: left;">
+								                <p style = "margin: 0px;">
+																	<input class="sb_input" type="text"/>
+																	<input class="sb_search" type="submit" value=""/>
+																</p>
+								            </form>
 								        </div>
-												<table>
-													<thead>
+
+
+												<button style =  "display: inline-block; float: right; border-radius: 0px;background-color:#2ea879;">
+													Update
+												</button>
+											</div>
+
+												<div id="table" class="table-editable">
+													<table class="table">
 														<tr>
 															<th>Medication Name</th>
 															<th>Serial ID</th>
 															<th>Price</th>
 															<th>Stock</th>
+															<th></th>
+															<th><span class="table-add" style = "cursor: pointer;">Add Column</span></th>
 														</tr>
-													</thead>
-													<tbody>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194725698</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Motril</td><td contenteditable= "true" class="user-name">344755298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">3</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Epipen</td><td contenteditable= "true" class="user-name">475954298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">12</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Motrin</td><td contenteditable= "true" class="user-name">195986298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">7</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Claritin</td><td contenteditable= "true" class="user-name">478554298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">8</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Viagra</td><td contenteditable= "true" class="user-name">902754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">22</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Cialis</td><td contenteditable= "true" class="user-name">902354298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">11</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
-														<tr><td contenteditable= "true" class="user-email">Advil</td><td contenteditable= "true" class="user-name">194754298</td><td contenteditable= "true" class="user-mobile">$10.00</td><td contenteditable= "true" class="user-mobile">5</td></tr>
+														<!-- This is our clonable table line -->
+														<tr class="hide">
+															<td contenteditable="true">Untitled</td>
+															<td contenteditable="true">undefined</td>
+															<td contenteditable="true">undefined</td>
+															<td contenteditable="true">undefined</td>
+															<td>
+																<span class="table-remove " style = "cursor: pointer;"> Remove </span>
+															</td>
+															<td>
+																<div style = "word-spacing: 20px;">
+																<span class="table-up " style = "cursor: pointer;"> Up</span>
+																<span class="table-down" style = "cursor: pointer;"> Down </span>
+															</div>
+															</td>
+														</tr>
+														<tbody>
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">293845648</td>
+																<td contenteditable= "true" class="user-mobile">$11.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
 
-													</tbody>
-												</table>
+															<tr><td contenteditable= "true" class="user-email">Claritin</td>
+																<td contenteditable= "true" class="user-name">890325698</td>
+																<td contenteditable= "true" class="user-mobile">$8.00</td>
+																<td contenteditable= "true" class="user-mobile">3</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Epipen</td>
+																<td contenteditable= "true" class="user-name">039727280</td>
+																<td contenteditable= "true" class="user-mobile">$13.00</td>
+																<td contenteditable= "true" class="user-mobile">10</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Viagra</td>
+																<td contenteditable= "true" class="user-name">189125665</td>
+																<td contenteditable= "true" class="user-mobile">$22.00</td>
+																<td contenteditable= "true" class="user-mobile">22</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">ender1</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Advil</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> - </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+
+															<tr><td contenteditable= "true" class="user-email">Ender</td>
+																<td contenteditable= "true" class="user-name">194725698</td>
+																<td contenteditable= "true" class="user-mobile">$10.00</td>
+																<td contenteditable= "true" class="user-mobile">5</td>
+																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																<td><div style = "word-spacing: 20px;">
+																		<span class="table-up " style = "cursor: pointer;"> Up</span>
+																		<span class="table-down" style = "cursor: pointer;"> Down </span>
+																		</div></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
 				<!--
 											<section id="section-topline-5" style = "padding: 0px !important;">
 												<div style = "margin-right: auto; margin-left: auto; width: 90%;">
@@ -360,17 +510,7 @@ $ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function()
 <script>
 
 </script>
-<script>
-$.ajax({
-        url: "http://localhost:5000/api/v1/pharmacy/presentorders?address=string",
-        type: 'GET',
-        dataType: 'json', // added data type
-        success: function(res) {
-            console.log(res);
-            alert(res);
-        }
-    });
-</script>
+
 <script src="{{url_for('static', filename='js/classie.js')}}"></script>
 <script src="{{url_for('static', filename='js/sidebarEffects.js')}}"></script>
 <script src="{{url_for('static', filename='js/stickyheader.js')}}"></script>
