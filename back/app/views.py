@@ -18,7 +18,7 @@ def get_pharmacy_inventory():
     inventory = Inventory.query.filter(Inventory.pharm_id == pharm.id).all()
     medicines = []
     for inv in inventory:
-        medicines.append({'name': inv.name, 'serial': inv.serial, 'price': inv.price})
+        medicines.append({'medicine_name': inv.name, 'serial': inv.serial, 'price': inv.price})
     return jsonify(num_medicines=len(medicines), medicines=medicines)
 
 @app.route("/api/v1/pharmacy/info", methods=['GET'])
@@ -35,7 +35,7 @@ def get_pharmacy_info():
         hours.append([h.day_of_week, h.opening_time, h.closing_time])
     return jsonify(location={"lat": pharm.latitude, "lng": pharm.longitude},
                     hours=hours,
-                    name=pharm.name,
+                    pharmacy_name=pharm.name,
                     email=pharm.email)
 
 @app.route("/api/v1/pharmacy/presentorders", methods=['GET'])
