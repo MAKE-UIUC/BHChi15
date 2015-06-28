@@ -51,7 +51,10 @@
 						<div class="main clearfix">
 							<div id = "topBar" style = "height: 50px; background-color: ;">
 							<div id="st-trigger-effects" style = "display: inline;">
-							<button data-effect="st-effect-5" style = "padding: 0 !important; background : #eaeaea;"><img src="click.png" alt="logo" style="width:150px; background: #eaeaea !important;"></button>
+
+							<button data-effect="st-effect-5" style = "float: left; margin-left: 40px !important; color:#2ea879; background : #eaeaea;">MENU</button>
+							<h3 id = "account" style = "float:right; padding-right: 50px; padding-top: 10px; margin: 0px;">111 S Halsted St Chicago, IL 60661 </h3>
+
 						</div>
 						</div
 							<div class="container">
@@ -68,7 +71,6 @@
 																</p>
 								            </form>
 								        </div>
-
 
 												<button style =  "display: inline-block; float: right; border-radius: 0px;background-color:#2ea879;">
 													Update
@@ -101,7 +103,6 @@
 															</div>
 															</td>
 														</tr>
-
 														<script>
 														$.ajax({
 														        url: "http://localhost:5000/api/v1/pharmacy/inventory?address=111+S+Halsted+St",
@@ -109,22 +110,23 @@
 														        dataType: 'json', // added data type
 														        success: function(res) {
 														            console.log(res);
-																				//alert(res);
 																				var length = res.num_medicines;
 																				for(var i = 0; i < length; i++){
 																					var medName = res.medicines[i].medicine_name;
-																					console.log(medName);
 																					var serial = res.medicines[i].serial;
 																					var price = res.medicines[i].price;
-
-																					var listItem = '<tr><td contenteditable= "true">' + medName + '</td><td contenteditable= "true" >' + serial + '</td><td contenteditable= "true">' + price + '</td><td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>' +'<td><div style = "word-spacing: 20px;"><span class="table-up " style = "cursor: pointer;"> Up</span><span class="table-down" style = "cursor: pointer;"> Down </span></div></td></tr>';
-
+																					var listItem = '<tr><td contenteditable= "true">' + medName + '</td><td contenteditable= "true" >' + serial + '</td><td contenteditable= "true">' + price + '</td><td><span class="table-remove" style = "cursor: pointer;"> Remove </span></td>' +'<td><div style = "word-spacing: 20px;"><span class="table-up " style = "cursor: pointer;"> Up</span><span class="table-down" style = "cursor: pointer;"> Down </span></div></td></tr>';
 																					$( listItem ).appendTo( ".listBody" );
+
 														        }
 																	}
 														    });
 														</script>
-
+														<style>
+														tr:nth-child(){
+															display: none;
+														}
+														</style>
 														<tbody class = "listBody">
 
 														</tbody>
@@ -172,12 +174,6 @@
 										-->
 
 
-											<script type="text/javascript" >
-													function showDiff(){
-													document.getElementById('diffChart').style.visibility='visible';
-													}
-											</script>
-
 										</div><!-- /content -->
 								</section>
 
@@ -219,7 +215,6 @@
 			</div><!-- /st-pusher -->
 		</div><!-- /st-container -->
 	</div> <!-- bind -->
-		<script src="js/cbpFWTabs.js"></script>
 
 		<script>
 			(function() {
@@ -386,7 +381,6 @@ $ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function()
 
 <script src="{{url_for('static', filename='js/classie.js')}}"></script>
 <script src="{{url_for('static', filename='js/sidebarEffects.js')}}"></script>
-<script src="{{url_for('static', filename='js/stickyheader.js')}}"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 	</body>
 </html>

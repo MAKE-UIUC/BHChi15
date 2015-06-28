@@ -6,6 +6,10 @@ from app.models import *
 from util import haversine
 
 # URL Routing
+@app.route("/")
+def login():
+    return render_template("login.html")
+
 @app.route("/index.html")
 def index():
     return render_template("index.html")
