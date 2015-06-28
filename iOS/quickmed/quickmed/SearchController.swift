@@ -16,6 +16,7 @@ class SearchController: UIViewController {
     @IBAction func search(sender: AnyObject) {
         var medicine:String = self.medName.text
         println(medicine)
+        //performSegueWithIdentifier("searchDone", sender: nil)
     }
 
     override func viewDidLoad() {
@@ -32,7 +33,11 @@ class SearchController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        if(segue.identifier == "yourIdentifierInStoryboard") {
+        var mapScene = segue.destinationViewController as! MapController
+
+
+        if(segue.identifier == "searchDone") {
+            var mapScene = segue.destinationViewController as! MapController
 
             //var yourNextViewController = (segue.destinationViewController as yourNextViewControllerClass)
             //yourNextViewController.value = yourValue
