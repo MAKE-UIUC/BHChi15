@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ee1-xU-vP8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="quickmed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MapController" customModule="quickmed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -35,9 +35,9 @@
                                     <color key="titleColor" red="0.93333333333333335" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="539" width="368" height="61"/>
-                                </variation>
+                                <connections>
+                                    <action selector="backToSearch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e2N-wc-8B7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -58,15 +58,15 @@
                                 <exclude reference="K4z-t5-ywt"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="M65-0K-V9q"/>
+                                <exclude reference="PNf-gD-ETt"/>
+                                <exclude reference="f52-H3-HXA"/>
                                 <exclude reference="4wk-up-Ri3"/>
                                 <exclude reference="USB-6R-TOn"/>
                                 <exclude reference="Wir-Fb-ARm"/>
                                 <exclude reference="crx-ur-1F5"/>
                                 <exclude reference="kTT-kt-xJS"/>
                                 <exclude reference="uVw-0d-RWL"/>
-                                <exclude reference="M65-0K-V9q"/>
-                                <exclude reference="PNf-gD-ETt"/>
-                                <exclude reference="f52-H3-HXA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -75,15 +75,15 @@
                                 <include reference="K4z-t5-ywt"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="M65-0K-V9q"/>
+                                <include reference="PNf-gD-ETt"/>
+                                <include reference="f52-H3-HXA"/>
                                 <include reference="4wk-up-Ri3"/>
                                 <include reference="USB-6R-TOn"/>
                                 <include reference="Wir-Fb-ARm"/>
                                 <include reference="crx-ur-1F5"/>
                                 <include reference="kTT-kt-xJS"/>
                                 <include reference="uVw-0d-RWL"/>
-                                <include reference="M65-0K-V9q"/>
-                                <include reference="PNf-gD-ETt"/>
-                                <include reference="f52-H3-HXA"/>
                             </mask>
                         </variation>
                     </view>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799.5" y="469"/>
+            <point key="canvasLocation" x="918" y="452"/>
         </scene>
         <!--Pay Controller-->
         <scene sceneID="x3y-Di-PMQ">
@@ -147,6 +147,7 @@
                                 </state>
                                 <connections>
                                     <action selector="search:" destination="Ee1-xU-vP8" eventType="touchUpInside" id="ZI7-Ai-uDN"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="26W-GJ-dqf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -211,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thV-Gk-XMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="469"/>
+            <point key="canvasLocation" x="189" y="452"/>
         </scene>
     </scenes>
 </document>
