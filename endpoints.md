@@ -71,7 +71,7 @@ locations | array(dict) | An array of dictionaries containing the name, address,
 ###python
 ###flask (backend for web architecture)
 ###javascript
-###jquery
+###jquery/ajax
 ###html/css
 ###restful API
 ###SQL
