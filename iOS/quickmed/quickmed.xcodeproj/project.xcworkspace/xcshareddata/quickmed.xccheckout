@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>29B8E5DE-F132-4448-A8B1-2EDE06024E46</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>quickmed</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F1A39C40B54D593B027724FF2C5861F9730429B0</key>
 		<string>https://github.com/MAKE-UIUC/BHChi15.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOS/quickmed/quickmed.xcodeproj/project.xcworkspace</string>
+	<string>iOS/quickmed/quickmed.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F1A39C40B54D593B027724FF2C5861F9730429B0</key>
