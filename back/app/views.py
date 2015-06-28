@@ -1,11 +1,13 @@
 from flask import Flask, jsonify, request
+from flask import render_template
+from flask.ext.login import login_required, current_user
 from app import app, db
 from app.models import *
 from util import haversine
 
 @app.route("/")
 def index():
-    return "Hello world!"
+    return render_template("inventory.html")
 
 @app.route("/api/v1/pharmacy/inventory", methods=['GET'])
 def get_pharmacy_inventory():
