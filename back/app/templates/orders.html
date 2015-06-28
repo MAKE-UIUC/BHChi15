@@ -45,11 +45,9 @@
 				<div class="st-content"><!-- this is the wrapper for the content -->
 						<!-- Top Navigation -->
 						<div class="main clearfix">
-							<div id = "topBar" style = "height: 50px; background-color: ;">
 							<div id="st-trigger-effects" style = "display: inline;">
 							<button data-effect="st-effect-5" style = "padding: 0 !important; background : #eaeaea;"><img src="click.png" alt="logo" style="width:150px; background: #eaeaea !important;"></button>
 						</div>
-						</div
 							<div class="container">
 								<!-- Top Navigation -->
 								<section>
@@ -305,17 +303,8 @@ $ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function()
 <script>
 
 </script>
-<script>
-$.ajax({
-        url: "http://localhost:5000//api/v1/pharmacy/presentorders?address=string",
-        type: 'GET',
-        dataType: 'json', // added data type
-        success: function(res) {
-            console.log(res);
-            alert(res);
-        }
-    });
-</script>
+
+
 
 		<script src="js/classie.js"></script>
 		<script src="js/diffview.js"></script>
