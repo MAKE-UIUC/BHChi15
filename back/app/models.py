@@ -1,5 +1,7 @@
 from app import db
 
+DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
 class Pharmacy(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=False)
@@ -12,7 +14,7 @@ class Pharmacy(db.Model):
     orders = db.relationship('Orders', backref='pharmacy', lazy='dynamic')
 
     def __repr__(self):
-        return '<Pharmacy {} - {} ({}, {}, {}) - {}>'.format(id, name, address, latitude, longitude, email)
+        return '<Pharmacy {} - {} ({}, {}, {}) - {}>'.format(self.id, self.name, self.address, self.latitude, self.longitude, self.email)
 
 class Hours(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -21,12 +23,10 @@ class Hours(db.Model):
     opening_time = db.Column(db.Integer, unique=False)
     closing_time = db.Column(db.Integer, unique=False)
 
-    DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-
     def __repr__(self):
-        return '<Pharmacy {} - {} {} to {}>'.format(pharm_id, DAYS[day_of_week], min_to_24h(opening_time), min_to_24h(closing_time))
+        return '<Pharmacy {} - {} {} to {}>'.format(self.pharm_id, DAYS[self.day_of_week], self.min_to_24h(self.opening_time), self.min_to_24h(self.closing_time))
 
-    def min_to_24h(minutes):
+    def min_to_24h(self, minutes):
         return '{0}:{1:0>2}'.format(minutes/60, minutes%60)
 
 class Orders(db.Model):
