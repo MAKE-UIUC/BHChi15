@@ -8,18 +8,21 @@
 		<meta name="description" content="An easy way to manage your databases" />
 		<meta name="keywords" content="databases" />
 		<meta name="author" content="Austin Chung" />
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/icons.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
-		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
-		<link rel="stylesheet" type="text/css" href="css/component1.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
-		<link rel="stylesheet" type="text/css" href="css/search.css" />
-		<link rel="stylesheet" type="text/css" href="css/diffview.css" />
-		<link rel="stylesheet" type="text/css" href="styles.css" />
-		<script src="js/modernizr.custom.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/demo.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/icons.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/component.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tabs.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tabstyles.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/component1.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/demo1.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/search.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+
+		<script src="{{url_for('static', filename='js/modernizr.custom.js')}}"></script>
 	</head>
 	<body>
 		<div class = "bind">
@@ -53,37 +56,87 @@
 							<div class="container">
 								<!-- Top Navigation -->
 								<section>
-									<div class="tabs tabs-style-topline" style = "background-color: white !important;">
-										<div class="content-wrap" style = "background-color: white !important; padding: 20px;">
-
+										<div class="content-wrap" style = "background-color: white !important; padding: 50px; padding-top: 10px;">
+											<h1 style = "margin:0px">Inventory</h1>
+											<div>
 												<div class="content">
-
-								                <form id="ui_element" class="sb_wrapper">
-								                    <p>
-														<input class="sb_input" type="text"/>
-														<input class="sb_search" type="submit" value=""/>
-													</p>
-								                </form>
+								            <form id="ui_element" class="sb_wrapper" style = "display: inline;float: left;">
+								                <p style = "margin: 0px;">
+																	<input class="sb_input" type="text"/>
+																	<input class="sb_search" type="submit" value=""/>
+																</p>
+								            </form>
 								        </div>
-												<table>
-													<thead>
+
+
+												<button style =  "display: inline-block; float: right; border-radius: 0px;background-color:#2ea879;">
+													Update
+												</button>
+											</div>
+
+												<div id="table" class="table-editable">
+													<table class="table">
 														<tr>
-															<th>Customer Name</th>
 															<th>Medication Name</th>
+															<th>Serial ID</th>
 															<th>Price</th>
+															<th>Stock</th>
+															<th></th>
+															<th><span class="table-add" style = "cursor: pointer;">Add Column</span></th>
 														</tr>
-													</thead>
-													<tbody>
-														<tr><td class="user-name">gary coleman</td><td class="user-email">Advil</td><td class="user-mobile">$10.00</td></tr>
-														<tr><td class="user-name">radhir CJ</td><td class="user-email">Viagra</td><td class="user-mobile">$11.00</td></tr>
-														<tr><td class="user-name">chloe nelson</td><td class="user-email">Cetaphil</td><td class="user-mobile">$11.00</td></tr>
-														<tr><td class="user-name">eric bell</td><td class="user-email">Motrin</td><td class="user-mobile">$14.00</td></tr>
-														<tr><td class="user-name">douglas hayes</td><td class="user-email">Epipen</td><td class="user-mobile">$14.00</td></tr>
-														<tr><td class="user-name">cameron brown</td><td class="user-email">Clariten</td><td class="user-mobile">$21.00</td></tr>
-														<tr><td class="user-name">nevaeh diaz</td><td class="user-email">Neosporin</td><td class="user-mobile">$16.00</td></tr>
-														<tr><td class="user-name">kathy miller</td><td class="user-email">Cyanide</td><td class="user-mobile">$13.00</td></tr>
-													</tbody>
-												</table>
+														<!-- This is our clonable table line -->
+														<tr class="hide">
+															<td contenteditable="true">Untitled</td>
+															<td contenteditable="true">undefined</td>
+															<td contenteditable="true">undefined</td>
+															<td contenteditable="true">undefined</td>
+															<td>
+																<span class="table-remove " style = "cursor: pointer;"> Remove </span>
+															</td>
+															<td>
+																<div style = "word-spacing: 20px;">
+																<span class="table-up " style = "cursor: pointer;"> Up</span>
+																<span class="table-down" style = "cursor: pointer;"> Down </span>
+															</div>
+															</td>
+														</tr>
+
+														<script>
+														$.ajax({
+														        url: "http://localhost:5000/api/v1/inventory/presentorders?address=string",
+														        type: 'GET',
+														        dataType: 'json', // added data type
+														        success: function(res) {
+														            console.log(res);
+																				//alert(res);
+																				var length = res.num_orders;
+																				for(var i = 0; i < length; i++){
+																					var medName = res.orders[i].name;
+																					var serial = res.orders[i].serial;
+																					var price = res.orders[i].price;
+																					var quantity = res.orders[i].price;
+																					var listItem = '<tr><td contenteditable= "true">' + medName + '</td>
+																						<td contenteditable= "true" >' + serial + '</td>
+																						<td contenteditable= "true">' + price + '</td>
+																						<td contenteditable= "true">' + quantity + '</td>
+																						<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																						<td><div style = "word-spacing: 20px;">
+																								<span class="table-up " style = "cursor: pointer;"> Up</span>
+																								<span class="table-down" style = "cursor: pointer;"> Down </span>
+																								</div></td>
+																					</tr>
+'
+																					$( listItem ).appendTo( ".listBody" );
+														        }
+																	}
+														    });
+														</script>
+
+														<tbody class = "listBody">
+
+														</tbody>
+													</table>
+												</div>
 				<!--
 											<section id="section-topline-5" style = "padding: 0px !important;">
 												<div style = "margin-right: auto; margin-left: auto; width: 90%;">
@@ -133,7 +186,39 @@
 											</script>
 
 										</div><!-- /content -->
-									</div><!-- /tabs -->
+								</section>
+
+								<section id="section-topline-2">
+									<div id="table" class="table-editable">
+										<table class="table">
+											<tr>
+												<th>Name</th>
+												<th>Value</th>
+												<th></th>
+												<th><span class="table-add" style = "cursor: pointer;">Add Column</span></th>
+											</tr>
+											<!-- This is our clonable table line -->
+											<tr class="hide">
+												<td contenteditable="true">Untitled</td>
+												<td contenteditable="true">undefined</td>
+												<td>
+													<span class="table-remove " style = "cursor: pointer;"> Remove </span>
+												</td>
+												<td>
+													<div style = "word-spacing: 20px;">
+													<span class="table-up " style = "cursor: pointer;"> Up</span>
+													<span class="table-down" style = "cursor: pointer;"> Down </span>
+												</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+<div id="submitbutton">
+<form action="CS465.sql">
+<button type="submit">Export Data</button>
+</form>
+</div>
+
 								</section>
 							</div><!-- /container -->
 						</div><!-- /main -->
@@ -305,23 +390,10 @@ $ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function()
 <script>
 
 </script>
-<script>
-$.ajax({
-        url: "http://localhost:5000//api/v1/pharmacy/presentorders?address=string",
-        type: 'GET',
-        dataType: 'json', // added data type
-        success: function(res) {
-            console.log(res);
-            alert(res);
-        }
-    });
-</script>
 
-		<script src="js/classie.js"></script>
-		<script src="js/diffview.js"></script>
-		<script src="js/difflib.js"></script>
-		<script src="js/sidebarEffects.js"></script>
-		<script src="js/jquery.stickyheader.js"></script>
+<script src="{{url_for('static', filename='js/classie.js')}}"></script>
+<script src="{{url_for('static', filename='js/sidebarEffects.js')}}"></script>
+<script src="{{url_for('static', filename='js/stickyheader.js')}}"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 	</body>
 </html>

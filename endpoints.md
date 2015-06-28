@@ -38,7 +38,7 @@ This method returns a JSON object containing the following key/value pairs:
 Response | Value type | Value
 ---|---|---
 num_medicines | int | The number of different medicines in stock at this pharmacy
-medicines | dict(string->string, string->int) | The name and serial of each medication in stock
+medicines | dict(string->string, string->int, string->float) | The name, serial, and price of each medication in stock
 
 ### GET /api/v1/users/pharmacies
 
@@ -60,4 +60,4 @@ This method returns a JSON object containing the following key/value pairs:
 Response | Value type | Value
 ---|---|---
 num_locations | int | The number of different pharmacies meeting the search criteria
-locations | array(dict) | An array of dictionaries containing the name, address, latitude/longitude, and approximate distance of each pharmacy
+locations | array(dict) | An array of dictionaries containing the name, address, latitude/longitude, approximate distance of each pharmacy, as well as the name of the medication and its price

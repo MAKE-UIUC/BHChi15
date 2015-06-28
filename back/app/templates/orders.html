@@ -8,18 +8,22 @@
 		<meta name="description" content="An easy way to manage your databases" />
 		<meta name="keywords" content="databases" />
 		<meta name="author" content="Austin Chung" />
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/icons.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
-		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
-		<link rel="stylesheet" type="text/css" href="css/component1.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
-		<link rel="stylesheet" type="text/css" href="css/search.css" />
-		<link rel="stylesheet" type="text/css" href="css/diffview.css" />
-		<link rel="stylesheet" type="text/css" href="styles.css" />
-		<script src="js/modernizr.custom.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/demo.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/icons.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/component.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tabs.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tabstyles.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/component1.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/demo1.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/search.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+
+
+		<script src="{{url_for('static', filename='js/modernizr.custom.js')}}"></script>
 	</head>
 	<body>
 		<div class = "bind">
@@ -45,41 +49,62 @@
 				<div class="st-content"><!-- this is the wrapper for the content -->
 						<!-- Top Navigation -->
 						<div class="main clearfix">
+							<div id = "topBar" style = "height: 50px; background-color: ;">
 							<div id="st-trigger-effects" style = "display: inline;">
-							<button data-effect="st-effect-5" style = "padding: 0 !important; background : #eaeaea;"><img src="click.png" alt="logo" style="width:150px; background: #eaeaea !important;"></button>
+							<button data-effect="st-effect-5" style = "padding: 0 !important; background : #eaeaea;">Menu</button>
 						</div>
+						</div
 							<div class="container">
 								<!-- Top Navigation -->
 								<section>
-									<div class="tabs tabs-style-topline" style = "background-color: white !important;">
-										<div class="content-wrap" style = "background-color: white !important; padding: 20px;">
 
+
+										<div class="content-wrap" style = "background-color: white !important; padding: 50px; padding-top: 10px;">
+											<h1 style = "margin:0px">Orders</h1>
+											<div>
 												<div class="content">
-
-								                <form id="ui_element" class="sb_wrapper">
-								                    <p>
-														<input class="sb_input" type="text"/>
-														<input class="sb_search" type="submit" value=""/>
-													</p>
-								                </form>
-								        </div>
+														<form id="ui_element" class="sb_wrapper" style = "display: inline;float: left;">
+																<p style = "margin: 0px;">
+																	<input class="sb_input" type="text"/>
+																	<input class="sb_search" type="submit" value=""/>
+																</p>
+														</form>
+												</div>
+											</div>
 												<table>
 													<thead>
 														<tr>
 															<th>Customer Name</th>
 															<th>Medication Name</th>
+															<th>Quantity</th>
 															<th>Price</th>
+															<th></th>
 														</tr>
 													</thead>
-													<tbody>
-														<tr><td class="user-name">gary coleman</td><td class="user-email">Advil</td><td class="user-mobile">$10.00</td></tr>
-														<tr><td class="user-name">radhir CJ</td><td class="user-email">Viagra</td><td class="user-mobile">$11.00</td></tr>
-														<tr><td class="user-name">chloe nelson</td><td class="user-email">Cetaphil</td><td class="user-mobile">$11.00</td></tr>
-														<tr><td class="user-name">eric bell</td><td class="user-email">Motrin</td><td class="user-mobile">$14.00</td></tr>
-														<tr><td class="user-name">douglas hayes</td><td class="user-email">Epipen</td><td class="user-mobile">$14.00</td></tr>
-														<tr><td class="user-name">cameron brown</td><td class="user-email">Clariten</td><td class="user-mobile">$21.00</td></tr>
-														<tr><td class="user-name">nevaeh diaz</td><td class="user-email">Neosporin</td><td class="user-mobile">$16.00</td></tr>
-														<tr><td class="user-name">kathy miller</td><td class="user-email">Cyanide</td><td class="user-mobile">$13.00</td></tr>
+													<script>
+													$.ajax({
+													        url: "http://localhost:5000/api/v1/pharmacy/presentorders?address=string",
+													        type: 'GET',
+													        dataType: 'json', // added data type
+													        success: function(res) {
+													            console.log(res);
+																			//alert(res);
+																			var length = res.num_orders;
+																			for(var i = 0; i < length; i++){
+																				var customerName = res.orders[i].customer;
+																				var medName = res.orders[i].name;
+																				var quantity = res.orders[i].quantity;
+																				var price = res.orders[i].price;
+																				var listItem = "<tr><td>" + customerName + "</td><td>" + medName + "</td><td>" + quantity + "</td><td>" + price + '</td><td><span class="table-remove" style = "cursor: pointer;"> DONE </span></td></tr>';
+
+																				$( listItem ).appendTo( ".listBody" );
+													        }
+																}
+													    });
+													</script>
+
+													<tbody class = "listBody">
+
 													</tbody>
 												</table>
 				<!--
@@ -131,7 +156,6 @@
 											</script>
 
 										</div><!-- /content -->
-									</div><!-- /tabs -->
 								</section>
 							</div><!-- /container -->
 						</div><!-- /main -->
@@ -140,7 +164,6 @@
 		</div><!-- /st-container -->
 	</div> <!-- bind -->
 		<script src="js/cbpFWTabs.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script>
 			(function() {
 
@@ -303,14 +326,9 @@ $ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function()
 <script>
 
 </script>
-
-
-
-		<script src="js/classie.js"></script>
-		<script src="js/diffview.js"></script>
-		<script src="js/difflib.js"></script>
-		<script src="js/sidebarEffects.js"></script>
-		<script src="js/jquery.stickyheader.js"></script>
+<script src="{{url_for('static', filename='js/classie.js')}}"></script>
+<script src="{{url_for('static', filename='js/sidebarEffects.js')}}"></script>
+<script src="{{url_for('static', filename='js/stickyheader.js')}}"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 	</body>
 </html>
