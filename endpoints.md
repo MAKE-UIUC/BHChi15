@@ -79,3 +79,4 @@ locations | array(dict) | An array of dictionaries containing the name, address,
 ###HEROKU
 ###VPN
 ###Git
+###Google Maps/Geocoder
