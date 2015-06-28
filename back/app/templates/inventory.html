@@ -56,7 +56,7 @@
 							<div class="container">
 								<!-- Top Navigation -->
 								<section>
-										<div class="content-wrap" style = "background-color: white !important; padding: 20px; padding-top: 10px;">
+										<div class="content-wrap" style = "background-color: white !important; padding: 50px; padding-top: 10px;">
 											<h1 style = "margin:0px">Inventory</h1>
 											<div>
 												<div class="content">
@@ -100,160 +100,40 @@
 															</div>
 															</td>
 														</tr>
-														<tbody>
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">293845648</td>
-																<td contenteditable= "true" class="user-mobile">$11.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
 
-															<tr><td contenteditable= "true" class="user-email">Claritin</td>
-																<td contenteditable= "true" class="user-name">890325698</td>
-																<td contenteditable= "true" class="user-mobile">$8.00</td>
-																<td contenteditable= "true" class="user-mobile">3</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
+														<script>
+														$.ajax({
+														        url: "http://localhost:5000/api/v1/inventory/presentorders?address=string",
+														        type: 'GET',
+														        dataType: 'json', // added data type
+														        success: function(res) {
+														            console.log(res);
+																				//alert(res);
+																				var length = res.num_orders;
+																				for(var i = 0; i < length; i++){
+																					var medName = res.orders[i].name;
+																					var serial = res.orders[i].serial;
+																					var price = res.orders[i].price;
+																					var quantity = res.orders[i].price;
+																					var listItem = '<tr><td contenteditable= "true">' + medName + '</td>
+																						<td contenteditable= "true" >' + serial + '</td>
+																						<td contenteditable= "true">' + price + '</td>
+																						<td contenteditable= "true">' + quantity + '</td>
+																						<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
+																						<td><div style = "word-spacing: 20px;">
+																								<span class="table-up " style = "cursor: pointer;"> Up</span>
+																								<span class="table-down" style = "cursor: pointer;"> Down </span>
+																								</div></td>
+																					</tr>
+'
+																					$( listItem ).appendTo( ".listBody" );
+														        }
+																	}
+														    });
+														</script>
 
-															<tr><td contenteditable= "true" class="user-email">Epipen</td>
-																<td contenteditable= "true" class="user-name">039727280</td>
-																<td contenteditable= "true" class="user-mobile">$13.00</td>
-																<td contenteditable= "true" class="user-mobile">10</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
+														<tbody class = "listBody">
 
-															<tr><td contenteditable= "true" class="user-email">Viagra</td>
-																<td contenteditable= "true" class="user-name">189125665</td>
-																<td contenteditable= "true" class="user-mobile">$22.00</td>
-																<td contenteditable= "true" class="user-mobile">22</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">ender1</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Advil</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> - </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
-
-															<tr><td contenteditable= "true" class="user-email">Ender</td>
-																<td contenteditable= "true" class="user-name">194725698</td>
-																<td contenteditable= "true" class="user-mobile">$10.00</td>
-																<td contenteditable= "true" class="user-mobile">5</td>
-																<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																<td><div style = "word-spacing: 20px;">
-																		<span class="table-up " style = "cursor: pointer;"> Up</span>
-																		<span class="table-down" style = "cursor: pointer;"> Down </span>
-																		</div></td>
-															</tr>
 														</tbody>
 													</table>
 												</div>
