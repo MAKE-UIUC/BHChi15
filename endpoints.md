@@ -74,3 +74,4 @@ locations | array(dict) | An array of dictionaries containing the name, address,
 ###jquery
 ###html/css
 ###restful API
+###SQL
