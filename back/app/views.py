@@ -48,7 +48,7 @@ def get_pharmacy_info():
         hours.append([h.day_of_week, h.opening_time, h.closing_time])
     return jsonify(location={"lat": pharm.latitude, "lng": pharm.longitude},
                     hours=hours,
-                    name=pharm.name,
+                    pharmacy_name=pharm.name,
                     email=pharm.email)
 
 @app.route("/api/v1/pharmacy/presentorders", methods=['GET'])
