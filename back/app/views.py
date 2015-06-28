@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from app import app, db
 from app.models import *
+from util import haversine
 
 @app.route("/")
 def index():
@@ -61,16 +62,25 @@ def get_pharmacy_past_orders():
 
 @app.route("/api/v1/users/pharmacies", methods=['GET'])
 def get_valid_pharmacies():
-    if request.args.get('medicine_name') is None:
+    medicine_name = request.args.get('medicine_name')
+    latitude = request.args.get('latitude')
+    longitude = request.args.get('longitude')
+    radius = request.args.get('radius')
+    if medicine_name is None:
         raise InvalidUsage('Invalid medicine name provided', status_code=400)
-    if request.args.get('latitude') is None:
+    if latitude is None:
         raise InvalidUsage('Invalid latitude provided', status_code=400)
-    if request.args.get('longitude') is None:
+    if longitude is None:
         raise InvalidUsage('Invalid longitude provided', status_code=400)
+    if radius is None:
+        radius = 10
+    inventory = Inventory.query.filter(Inventory.name == medicine_name).all()
     locations = []
-    locations.append({'latitude': '123.456', 'longitude': '123.456'})
-    locations.append({'latitude': '23.456', 'longitude': '23.456'})
-    locations.append({'latitude': '3.456', 'longitude': '3.456'})
+    for inv in inventory:
+        pharm = Pharmacy.query.filter(Pharmacy.id == inv.pharm_id).first()
+        dist = haversine(pharm.latitude, pharm.longitude, latitude, longitude)
+        if dist <= radius:
+            locations.append({'name': pharm.name, 'approx_dist': dist, 'latitude': pharm.latitude, 'longitude': pharm.longitude, 'address': pharm.address})
     return jsonify(num_locations=len(locations), locations=locations)
 
 class InvalidUsage(Exception):
