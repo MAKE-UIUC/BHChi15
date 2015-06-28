@@ -1,2 +1,4 @@
 *.sock
 *.pyc
+*.swp
+db_repository

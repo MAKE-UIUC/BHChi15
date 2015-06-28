@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MedQuick</title>
+		<meta name="description" content="An easy way to manage your databases" />
+		<meta name="keywords" content="databases" />
+		<meta name="author" content="Austin Chung" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+		<link rel="stylesheet" type="text/css" href="css/component1.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
+		<link rel="stylesheet" type="text/css" href="css/search.css" />
+		<link rel="stylesheet" type="text/css" href="css/diffview.css" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class = "bind">
+		<div id="st-container" class="st-container">
+			<!--
+				Menus will be on top of the push wrapper
+			-->
+			<nav class="st-menu st-effect-5" id="menu-5">
+					<ul>
+							<li><a class="icon icon-home" href="index.html">Home</a></li>
+							<li><a class="icon icon-user" href="orders.html">Orders</a></li>
+							<li><a class="icon icon-stack" href="inventory.html">Inventory</a></li>
+							<li><a class="icon icon-data" href="data.html">Data</a></li>
+							<li><a class="icon icon-tools" href="settings.html">Settings</a></li>
+					</ul>
+			</nav>
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+				<!--
+					example menus
+					these menus will be under the push wrappers
+				-->
+				<div class="st-content"><!-- this is the wrapper for the content -->
+						<!-- Top Navigation -->
+						<div class="main clearfix">
+							<div id = "topBar" style = "height: 50px; background-color: ;">
+							<div id="st-trigger-effects" style = "display: inline;">
+							<button data-effect="st-effect-5" style = "padding: 0 !important; background : #eaeaea;"><img src="click.png" alt="logo" style="width:150px; background: #eaeaea !important;"></button>
+						</div>
+						</div
+							<div class="container">
+								<!-- Top Navigation -->
+								<section>
+									<div class="tabs tabs-style-topline" style = "background-color: white !important;">
+										<div class="content-wrap" style = "background-color: white !important; padding: 20px;">
+
+												<div class="content">
+
+								                <form id="ui_element" class="sb_wrapper">
+								                    <p>
+														<input class="sb_input" type="text"/>
+														<input class="sb_search" type="submit" value=""/>
+													</p>
+								                </form>
+								        </div>
+												<table>
+													<thead>
+														<tr>
+															<th>Customer Name</th>
+															<th>Medication Name</th>
+															<th>Price</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr><td class="user-name">gary coleman</td><td class="user-email">Advil</td><td class="user-mobile">$10.00</td></tr>
+														<tr><td class="user-name">radhir CJ</td><td class="user-email">Viagra</td><td class="user-mobile">$11.00</td></tr>
+														<tr><td class="user-name">chloe nelson</td><td class="user-email">Cetaphil</td><td class="user-mobile">$11.00</td></tr>
+														<tr><td class="user-name">eric bell</td><td class="user-email">Motrin</td><td class="user-mobile">$14.00</td></tr>
+														<tr><td class="user-name">douglas hayes</td><td class="user-email">Epipen</td><td class="user-mobile">$14.00</td></tr>
+														<tr><td class="user-name">cameron brown</td><td class="user-email">Clariten</td><td class="user-mobile">$21.00</td></tr>
+														<tr><td class="user-name">nevaeh diaz</td><td class="user-email">Neosporin</td><td class="user-mobile">$16.00</td></tr>
+														<tr><td class="user-name">kathy miller</td><td class="user-email">Cyanide</td><td class="user-mobile">$13.00</td></tr>
+													</tbody>
+												</table>
+				<!--
+											<section id="section-topline-5" style = "padding: 0px !important;">
+												<div style = "margin-right: auto; margin-left: auto; width: 90%;">
+													<div id = "chart_div" class = "graphs"></div>
+
+													<div class = "graphInfo">
+														<h1>Pie Graph</h1>
+														<h4>You can use pie graphs to visualize database data.</h4>
+														<div id="submitbutton">
+														<form action="CS465.sql">
+															<button type="submit">Export Data</button>
+														</form>
+														</div>
+													</div>
+													<div id = "chart_div0" class = "graphs"></div>
+													<div class = "graphInfo">
+														<h1>Bar Graph</h1>
+														<h4>You can use pie graphs to visualize database data.</h4>
+
+														<div id="submitbutton">
+														<form action="CS465.sql">
+															<button type="submit">Export Data</button>
+														</form>
+														</div>
+													</div>
+													<div id = "chart_div1" class = "graphs"></div>
+													<div class = "graphInfo">
+														<h1>Scatter Plot</h1>
+														<h4>You can use pie graphs to visualize database data.</h4>
+
+														<div id="submitbutton">
+														<form action="CS465.sql">
+															<button type="submit">Export Data</button>
+														</form>
+														</div>
+													</div>
+											</div>
+
+											</section>
+										-->
+
+
+											<script type="text/javascript" >
+													function showDiff(){
+													document.getElementById('diffChart').style.visibility='visible';
+													}
+											</script>
+
+										</div><!-- /content -->
+									</div><!-- /tabs -->
+								</section>
+							</div><!-- /container -->
+						</div><!-- /main -->
+				</div><!-- /st-content -->
+			</div><!-- /st-pusher -->
+		</div><!-- /st-container -->
+	</div> <!-- bind -->
+		<script src="js/cbpFWTabs.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+
+		<script>
+		$(function() {
+/**
+* the element
+*/
+var $ui 		= $('#ui_element');
+
+/**
+* on focus and on click display the dropdown,
+* and change the arrow image
+*/
+$ui.find('.sb_input').bind('focus click',function(){
+	$ui.find('.sb_down')
+		.addClass('sb_up')
+		.removeClass('sb_down')
+		.andSelf()
+		.find('.sb_dropdown')
+		.show();
+});
+
+/**
+* on mouse leave hide the dropdown,
+* and change the arrow image
+*/
+$ui.bind('mouseleave',function(){
+	$ui.find('.sb_up')
+		.addClass('sb_down')
+		.removeClass('sb_up')
+		.andSelf()
+		.find('.sb_dropdown')
+		.hide();
+});
+
+/**
+* selecting all checkboxes
+*/
+$ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function(){
+	$(this).parent().siblings().find(':checkbox').attr('checked',this.checked).attr('disabled',this.checked);
+});
+		});
+</script>
+<script>
+	(function() {
+
+		[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+			new CBPFWTabs( el );
+		});
+
+	})();
+</script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+	// Load the Visualization API and the piechart package.
+	google.load('visualization', '1.0', {'packages':['corechart']});
+
+	// Set a callback to run when the Google Visualization API is loaded.
+	google.setOnLoadCallback(drawChart);
+
+	// Callback that creates and populates a data table,
+	// instantiates the pie chart, passes in the data and
+	// draws it.
+	function drawChart() {
+
+		// Create the data table.
+		var data = new google.visualization.DataTable();
+		data.addColumn('string', 'Topping');
+		data.addColumn('number', 'Slices');
+		data.addRows([
+			['Mushrooms', 3],
+			['Onions', 1],
+			['Olives', 1],
+			['Zucchini', 1],
+			['Pepperoni', 2]
+		]);
+
+		// Set chart options
+		var options = {'title':'How Much Pizza I Ate Last Night',
+									'width':400,
+									'height':300};
+
+		// Instantiate and draw our chart, passing in some options.
+		var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+		chart.draw(data, options);
+	}
+</script>
+
+<script type="text/javascript">
+
+	// Load the Visualization API and the piechart package.
+	google.load('visualization', '1.0', {'packages':['corechart']});
+
+	// Set a callback to run when the Google Visualization API is loaded.
+	google.setOnLoadCallback(drawChart);
+
+	// Callback that creates and populates a data table,
+	// instantiates the pie chart, passes in the data and
+	// draws it.
+	function drawChart() {
+
+		// Create the data table.
+		var data = new google.visualization.DataTable();
+		data.addColumn('string', 'Topping');
+		data.addColumn('number', 'Slices');
+		data.addRows([
+			['Mushrooms', 3],
+			['Onions', 1],
+			['Olives', 1],
+			['Zucchini', 1],
+			['Pepperoni', 2]
+		]);
+
+		// Set chart options
+		var options = {'title':'How Much Pizza I Ate Last Night',
+									'width':400,
+									'height':300};
+
+		// Instantiate and draw our chart, passing in some options.
+		var chart = new google.visualization.BarChart(document.getElementById('chart_div0'));
+		chart.draw(data, options);
+	}
+</script>
+<script type="text/javascript">
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+			['Age', 'Weight'],
+			[ 8,      12],
+			[ 4,      5.5],
+			[ 11,     14],
+			[ 4,      5],
+			[ 3,      3.5],
+			[ 6.5,    7]
+		]);
+
+		var options = {
+			title: 'Age vs. Weight comparison',
+			hAxis: {title: 'Age', minValue: 0, maxValue: 15},
+			vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
+			legend: 'none'
+		};
+
+		var chart = new google.visualization.ScatterChart(document.getElementById('chart_div1'));
+
+		chart.draw(data, options);
+	}
+</script>
+
+<script>
+
+</script>
+<script>
+$.ajax({
+        url: "http://localhost:5000//api/v1/pharmacy/presentorders?address=string",
+        type: 'GET',
+        dataType: 'json', // added data type
+        success: function(res) {
+            console.log(res);
+            alert(res);
+        }
+    });
+</script>
+
+		<script src="js/classie.js"></script>
+		<script src="js/diffview.js"></script>
+		<script src="js/difflib.js"></script>
+		<script src="js/sidebarEffects.js"></script>
+		<script src="js/jquery.stickyheader.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+	</body>
+</html>
