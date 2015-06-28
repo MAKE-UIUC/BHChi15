@@ -19,6 +19,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/demo1.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/search.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
 
 
@@ -80,7 +81,7 @@
 															<th>Medication Name</th>
 															<th>Serial ID</th>
 															<th>Price</th>
-															<th>Stock</th>
+
 															<th></th>
 															<th><span class="table-add" style = "cursor: pointer;">Add Column</span></th>
 														</tr>
@@ -88,7 +89,7 @@
 														<tr class="hide">
 															<td contenteditable="true">Untitled</td>
 															<td contenteditable="true">undefined</td>
-															<td contenteditable="true">undefined</td>
+
 															<td contenteditable="true">undefined</td>
 															<td>
 																<span class="table-remove " style = "cursor: pointer;"> Remove </span>
@@ -103,29 +104,21 @@
 
 														<script>
 														$.ajax({
-														        url: "http://localhost:5000/api/v1/pharmacy/inventory/?address=string",
+														        url: "http://localhost:5000/api/v1/pharmacy/inventory?address=111+S+Halsted+St",
 														        type: 'GET',
 														        dataType: 'json', // added data type
 														        success: function(res) {
 														            console.log(res);
 																				//alert(res);
-																				var length = res.num_orders;
+																				var length = res.num_medicines;
 																				for(var i = 0; i < length; i++){
-																					var medName = res.orders[i].name;
-																					var serial = res.orders[i].serial;
-																					var price = res.orders[i].price;
-																					var quantity = res.orders[i].price;
-																					var listItem = '<tr><td contenteditable= "true">' + medName + '</td>
-																						<td contenteditable= "true" >' + serial + '</td>
-																						<td contenteditable= "true">' + price + '</td>
-																						<td contenteditable= "true">' + quantity + '</td>
-																						<td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>
-																						<td><div style = "word-spacing: 20px;">
-																								<span class="table-up " style = "cursor: pointer;"> Up</span>
-																								<span class="table-down" style = "cursor: pointer;"> Down </span>
-																								</div></td>
-																					</tr>
-'
+																					var medName = res.medicines[i].medicine_name;
+																					console.log(medName);
+																					var serial = res.medicines[i].serial;
+																					var price = res.medicines[i].price;
+
+																					var listItem = '<tr><td contenteditable= "true">' + medName + '</td><td contenteditable= "true" >' + serial + '</td><td contenteditable= "true">' + price + '</td><td><span class="table-remove " style = "cursor: pointer;"> Remove </span></td>' +'<td><div style = "word-spacing: 20px;"><span class="table-up " style = "cursor: pointer;"> Up</span><span class="table-down" style = "cursor: pointer;"> Down </span></div></td></tr>';
+
 																					$( listItem ).appendTo( ".listBody" );
 														        }
 																	}
@@ -227,7 +220,7 @@
 		</div><!-- /st-container -->
 	</div> <!-- bind -->
 		<script src="js/cbpFWTabs.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
 		<script>
 			(function() {
 

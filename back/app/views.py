@@ -18,7 +18,7 @@ def inventory():
 def orders():
     return render_template("orders.html")
 
-        
+
 # API
 @app.route("/api/v1/pharmacy/inventory", methods=['GET'])
 def get_pharmacy_inventory():
@@ -31,7 +31,7 @@ def get_pharmacy_inventory():
     inventory = Inventory.query.filter(Inventory.pharm_id == pharm.id).all()
     medicines = []
     for inv in inventory:
-        medicines.append({'name': inv.name, 'serial': inv.serial, 'price': inv.price})
+        medicines.append({'medicine_name': inv.name, 'serial': inv.serial, 'price': inv.price})
     return jsonify(num_medicines=len(medicines), medicines=medicines)
 
 @app.route("/api/v1/pharmacy/info", methods=['GET'])
