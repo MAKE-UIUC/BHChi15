@@ -16,8 +16,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         var parameters: [String: String] = ["medicine_name": "stuff", "latitude": "12.0", "longitude": "12.0"]
 
-        let url = NSURL(string: "http://bh1.intense.io/")
-        //let parameterString = parameters.stringFromHttpParameters()
+        let url = NSURL(string: "http://bh1.intense.io/api/v1/users/pharmacies?medicine_name=Claritin+200mg&latitude=41.2&longitude=-87.5&radius=100")
 
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             println(NSString(data: data, encoding: NSUTF8StringEncoding))

@@ -1,0 +1,1 @@
+../../../coinbase-official/Pod/Classes/CoinbaseOAuth.h

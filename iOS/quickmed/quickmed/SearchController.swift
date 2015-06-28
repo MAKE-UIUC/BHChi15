@@ -11,6 +11,13 @@ import UIKit
 class SearchController: UIViewController {
 
     @IBOutlet weak var medName: UITextField!
+
+
+    @IBAction func search(sender: AnyObject) {
+        var medicine:String = self.medName.text
+        println(medicine)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         medName.becomeFirstResponder()
@@ -21,6 +28,15 @@ class SearchController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if(segue.identifier == "yourIdentifierInStoryboard") {
+
+            //var yourNextViewController = (segue.destinationViewController as yourNextViewControllerClass)
+            //yourNextViewController.value = yourValue
+        }
     }
     
 

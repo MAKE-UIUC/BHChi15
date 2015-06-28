@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ee1-xU-vP8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -26,16 +27,63 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="67U-gl-SmA"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4z-t5-ywt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="21"/>
+                                <state key="normal" title="Back to Search">
+                                    <color key="titleColor" red="0.93333333333333335" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="539" width="368" height="61"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="4wk-up-Ri3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K4z-t5-ywt" secondAttribute="bottom" id="M65-0K-V9q"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K4z-t5-ywt" secondAttribute="bottom" id="PNf-gD-ETt"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="USB-6R-TOn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K4z-t5-ywt" secondAttribute="trailing" constant="-16" id="Wir-Fb-ARm"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="crx-ur-1F5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K4z-t5-ywt" secondAttribute="bottom" id="f52-H3-HXA"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="kTT-kt-xJS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K4z-t5-ywt" secondAttribute="trailing" id="uVw-0d-RWL"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="pq7-fK-s4B"/>
+                                <exclude reference="K4z-t5-ywt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4wk-up-Ri3"/>
+                                <exclude reference="USB-6R-TOn"/>
+                                <exclude reference="Wir-Fb-ARm"/>
+                                <exclude reference="crx-ur-1F5"/>
+                                <exclude reference="kTT-kt-xJS"/>
+                                <exclude reference="uVw-0d-RWL"/>
+                                <exclude reference="M65-0K-V9q"/>
+                                <exclude reference="PNf-gD-ETt"/>
+                                <exclude reference="f52-H3-HXA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="pq7-fK-s4B"/>
+                                <include reference="K4z-t5-ywt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4wk-up-Ri3"/>
+                                <include reference="USB-6R-TOn"/>
+                                <include reference="Wir-Fb-ARm"/>
+                                <include reference="crx-ur-1F5"/>
+                                <include reference="kTT-kt-xJS"/>
+                                <include reference="uVw-0d-RWL"/>
+                                <include reference="M65-0K-V9q"/>
+                                <include reference="PNf-gD-ETt"/>
+                                <include reference="f52-H3-HXA"/>
                             </mask>
                         </variation>
                     </view>
@@ -45,7 +93,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931.5" y="469"/>
+            <point key="canvasLocation" x="799.5" y="469"/>
+        </scene>
+        <!--Pay Controller-->
+        <scene sceneID="x3y-Di-PMQ">
+            <objects>
+                <viewController id="wRe-Jy-Hkg" customClass="PayController" customModule="quickmed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cy0-EQ-5zG"/>
+                        <viewControllerLayoutGuide type="bottom" id="dnx-e1-wiO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BLq-Bh-NEi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" label="PayController"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UD-5s-9AO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="469"/>
         </scene>
         <!--SearchController-->
         <scene sceneID="dnI-vs-wzw">
@@ -56,30 +123,32 @@
                         <viewControllerLayoutGuide type="bottom" id="N5E-t5-jou"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tor-dJ-kqC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What meds do you need?" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ir6-QK-gKM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What meds do you need?" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ir6-QK-gKM">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="search"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJc-7h-d5U">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.97647058823529409" green="0.17254901960784313" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuickMed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1US-FS-Vtf">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="50"/>
                                 <color key="textColor" red="0.97647058823529409" green="0.17254901960784313" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="104" width="368" height="87"/>
-                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJc-7h-d5U">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.17254901960784313" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="15"/>
+                                <state key="normal" title="Near Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="search:" destination="Ee1-xU-vP8" eventType="touchUpInside" id="ZI7-Ai-uDN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -102,8 +171,8 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ir6-QK-gKM"/>
-                                <exclude reference="QJc-7h-d5U"/>
                                 <exclude reference="1US-FS-Vtf"/>
+                                <exclude reference="QJc-7h-d5U"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="SrE-Xo-put"/>
@@ -120,8 +189,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="ir6-QK-gKM"/>
-                                <include reference="QJc-7h-d5U"/>
                                 <include reference="1US-FS-Vtf"/>
+                                <include reference="QJc-7h-d5U"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="SrE-Xo-put"/>
