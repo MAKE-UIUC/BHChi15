@@ -22,11 +22,13 @@ def get_pharmacy_inventory():
     address = request.args.get('address')
     if address is None:
         raise InvalidUsage('Invalid address provided', status_code=400)
-    pharm = Pharmacy.query.filter(Pharmacy.address == address).first()
+    pharm = Pharmacy.query.filter(Pharmacy.address.like('%{}%'.format(address))).first()
+    if pharm is None:
+        raise InvalidUsage('Invalid address provided', status_code=400)
     inventory = Inventory.query.filter(Inventory.pharm_id == pharm.id).all()
     medicines = []
     for inv in inventory:
-        medicines.append({'name': inv.name, 'serial': inv.serial})
+        medicines.append({'medicine_name': inv.name, 'serial': inv.serial, 'price': inv.price})
     return jsonify(num_medicines=len(medicines), medicines=medicines)
 
 @app.route("/api/v1/pharmacy/info", methods=['GET'])
@@ -34,40 +36,44 @@ def get_pharmacy_info():
     address = request.args.get('address')
     if address is None:
         raise InvalidUsage('Invalid address provided', status_code=400)
-    pharm = Pharmacy.query.filter(Pharmacy.address == address).first()
+    pharm = Pharmacy.query.filter(Pharmacy.address.like('%{}%'.format(address))).first()
+    if pharm is None:
+        raise InvalidUsage('Invalid address provided', status_code=400)
     hours_res = Hours.query.filter(Hours.pharm_id == pharm.id).all()
     hours = []
     for h in hours_res:
         hours.append([h.day_of_week, h.opening_time, h.closing_time])
     return jsonify(location={"lat": pharm.latitude, "lng": pharm.longitude},
                     hours=hours,
-                    name=pharm.name,
+                    pharmacy_name=pharm.name,
                     email=pharm.email)
 
 @app.route("/api/v1/pharmacy/presentorders", methods=['GET'])
 def get_pharmacy_present_orders():
-    if request.args.get('address') is None:
+    address = request.args.get('address')
+    if address is None:
         raise InvalidUsage('Invalid address provided', status_code=400)
+    pharm = Pharmacy.query.filter(Pharmacy.address.like('%{}%'.format(address))).first()
+    if pharm is None:
+        raise InvalidUsage('Invalid address provided', status_code=400)
+    orders_res = Orders.query.filter(Orders.pharm_id == pharm.id).filter(Orders.fulfilled == False).all()
     orders = []
-    orders.append({'customer': 'John Doe', 'name': 'Claritin 200mg', 'quantity': 50, 'price': '3.99'})
-    orders.append({'customer': 'Jane Doe', 'name': 'Claritin 200mg', 'quantity': 100, 'price': '7.49'})
-    orders.append({'customer': 'John Smith', 'name': 'Claritin 200mg', 'quantity': 200, 'price': '12.99'})
-    orders.append({'customer': 'Jane Smith', 'name': 'Tylenol 200mg', 'quantity': 100, 'price': '6.99'})
-    orders.append({'customer': 'Weter Poo', 'name': 'Tylenol 300mg', 'quantity': 100, 'price': '7.99'})
-    orders.append({'customer': 'Peter Woo', 'name': 'Tylenol 400mg', 'quantity': 100, 'price': '8.99'})
+    for order in orders_res:
+        orders.append({'customer': order.customer, 'medicine_name': order.medicine, 'quantity': order.quantity, 'price': order.price, 'timestamp': order.timestamp})
     return jsonify(num_orders=len(orders), orders=orders)
 
 @app.route("/api/v1/pharmacy/pastorders", methods=['GET'])
 def get_pharmacy_past_orders():
-    if request.args.get('address') is None:
+    address = request.args.get('address')
+    if address is None:
         raise InvalidUsage('Invalid address provided', status_code=400)
+    pharm = Pharmacy.query.filter(Pharmacy.address.like('%{}%'.format(address))).first()
+    if pharm is None:
+        raise InvalidUsage('Invalid address provided', status_code=400)
+    orders_res = Orders.query.filter(Orders.pharm_id == pharm.id).filter(Orders.fulfilled == True).all()
     orders = []
-    orders.append({'name': 'Claritin 200mg', 'quantity': 50, 'price': '3.99'})
-    orders.append({'name': 'Claritin 200mg', 'quantity': 100, 'price': '7.49'})
-    orders.append({'name': 'Claritin 200mg', 'quantity': 200, 'price': '12.99'})
-    orders.append({'name': 'Tylenol 200mg', 'quantity': 100, 'price': '6.99'})
-    orders.append({'name': 'Tylenol 300mg', 'quantity': 100, 'price': '7.99'})
-    orders.append({'name': 'Tylenol 400mg', 'quantity': 100, 'price': '8.99'})
+    for order in orders_res:
+        orders.append({'customer': order.customer, 'medicine_name': order.medicine, 'quantity': order.quantity, 'price': order.price, 'timestamp': order.timestamp})
     return jsonify(num_orders=len(orders), orders=orders)
 
 @app.route("/api/v1/users/pharmacies", methods=['GET'])
@@ -84,14 +90,36 @@ def get_valid_pharmacies():
         raise InvalidUsage('Invalid longitude provided', status_code=400)
     if radius is None:
         radius = 10
-    inventory = Inventory.query.filter(Inventory.name == medicine_name).all()
+    else:
+        radius = float(radius)
+    inventory = Inventory.query.filter(Inventory.name.like('%{}%'.format(medicine_name))).all()
     locations = []
     for inv in inventory:
         pharm = Pharmacy.query.filter(Pharmacy.id == inv.pharm_id).first()
         dist = haversine(pharm.latitude, pharm.longitude, latitude, longitude)
-        if dist <= radius:
-            locations.append({'name': pharm.name, 'approx_dist': dist, 'latitude': pharm.latitude, 'longitude': pharm.longitude, 'address': pharm.address})
+        if dist < radius:
+            locations.append({'name': pharm.name, 'approx_dist': dist, 'latitude': pharm.latitude, 'longitude': pharm.longitude, 'address': pharm.address, 'medicine_name': inv.name, 'price': inv.price})
     return jsonify(num_locations=len(locations), locations=locations)
+
+@app.route("/api/v1/users/order", methods=['POST'])
+def make_order():
+    json = request.get_json();
+    customer_name = json['customer_name']
+    medicine_name = json['medicine_name']
+    quantity = json['quantity']
+    pharm_id = json['pharmacy_id']
+    if medicine_name is None:
+        raise InvalidUsage('Invalid medicine name provided', status_code=400)
+    if customer_name is None:
+        raise InvalidUsage('Invalid customer name provided', status_code=400)
+    if quantity is None:
+        raise InvalidUsage('Invalid quantity provided', status_code=400)
+    if pharm_id is None:
+        raise InvalidUsage('Invalid pharmacy id provided', status_code=400)
+    order = Orders(customer_name, medicine_name, quantity, pharm_id)
+    db.session.add(order)
+    db.session.commit()
+    return jsonify(price=order.price)
 
 class InvalidUsage(Exception):
     status_code = 400
