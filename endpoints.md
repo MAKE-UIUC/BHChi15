@@ -76,3 +76,4 @@ locations | array(dict) | An array of dictionaries containing the name, address,
 ###restful API
 ###SQL
 ###SQLALCHEMY
+###HEROKU
