@@ -77,3 +77,4 @@ locations | array(dict) | An array of dictionaries containing the name, address,
 ###SQL
 ###SQLALCHEMY
 ###HEROKU
+###VPN
