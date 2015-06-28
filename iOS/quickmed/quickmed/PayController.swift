@@ -12,8 +12,7 @@ class PayController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        Venmo.startWithAppId("app_id", secret:"your_secret", name:"app_name")
     }
 
     override func didReceiveMemoryWarning() {

@@ -20,9 +20,6 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pq7-fK-s4B">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="67U-gl-SmA"/>
                                 </connections>
@@ -31,26 +28,32 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="21"/>
-                                <state key="normal" title="Back to Search">
+                                <state key="normal" title="Purchase">
                                     <color key="titleColor" red="0.93333333333333335" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="492" width="368" height="50"/>
+                                </variation>
                                 <connections>
-                                    <action selector="backToSearch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e2N-wc-8B7"/>
+                                    <segue destination="wRe-Jy-Hkg" kind="show" id="Ye6-ka-pc0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K4z-t5-ywt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="4wk-up-Ri3"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K4z-t5-ywt" secondAttribute="bottom" id="M65-0K-V9q"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K4z-t5-ywt" secondAttribute="bottom" id="PNf-gD-ETt"/>
-                            <constraint firstItem="K4z-t5-ywt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="USB-6R-TOn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K4z-t5-ywt" secondAttribute="trailing" constant="-16" id="Wir-Fb-ARm"/>
-                            <constraint firstItem="K4z-t5-ywt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="crx-ur-1F5"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K4z-t5-ywt" secondAttribute="bottom" id="f52-H3-HXA"/>
-                            <constraint firstItem="K4z-t5-ywt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="kTT-kt-xJS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K4z-t5-ywt" secondAttribute="trailing" id="uVw-0d-RWL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pq7-fK-s4B" secondAttribute="trailing" constant="-16" id="4JX-0x-HzT"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ARg-OY-G3r"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="472" id="TaH-mV-2fg"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="UhG-fE-Q1t"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K4z-t5-ywt" secondAttribute="bottom" id="hqw-CW-xSh"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="530" id="oyS-et-BjU"/>
+                            <constraint firstItem="pq7-fK-s4B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="rQx-Oe-VSj"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K4z-t5-ywt" secondAttribute="bottom" constant="58" id="vKI-a8-ALH"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="xhP-JI-MM4"/>
+                            <constraint firstItem="pq7-fK-s4B" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="y27-Ys-hMu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pq7-fK-s4B" secondAttribute="bottom" id="zwM-xh-lQh"/>
+                            <constraint firstItem="K4z-t5-ywt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="zzn-1M-uwa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -58,15 +61,18 @@
                                 <exclude reference="K4z-t5-ywt"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="M65-0K-V9q"/>
-                                <exclude reference="PNf-gD-ETt"/>
-                                <exclude reference="f52-H3-HXA"/>
-                                <exclude reference="4wk-up-Ri3"/>
-                                <exclude reference="USB-6R-TOn"/>
-                                <exclude reference="Wir-Fb-ARm"/>
-                                <exclude reference="crx-ur-1F5"/>
-                                <exclude reference="kTT-kt-xJS"/>
-                                <exclude reference="uVw-0d-RWL"/>
+                                <exclude reference="4JX-0x-HzT"/>
+                                <exclude reference="rQx-Oe-VSj"/>
+                                <exclude reference="y27-Ys-hMu"/>
+                                <exclude reference="ARg-OY-G3r"/>
+                                <exclude reference="TaH-mV-2fg"/>
+                                <exclude reference="UhG-fE-Q1t"/>
+                                <exclude reference="oyS-et-BjU"/>
+                                <exclude reference="xhP-JI-MM4"/>
+                                <exclude reference="zzn-1M-uwa"/>
+                                <exclude reference="hqw-CW-xSh"/>
+                                <exclude reference="vKI-a8-ALH"/>
+                                <exclude reference="zwM-xh-lQh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -75,15 +81,18 @@
                                 <include reference="K4z-t5-ywt"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="M65-0K-V9q"/>
-                                <include reference="PNf-gD-ETt"/>
-                                <include reference="f52-H3-HXA"/>
-                                <include reference="4wk-up-Ri3"/>
-                                <include reference="USB-6R-TOn"/>
-                                <include reference="Wir-Fb-ARm"/>
-                                <include reference="crx-ur-1F5"/>
-                                <include reference="kTT-kt-xJS"/>
-                                <include reference="uVw-0d-RWL"/>
+                                <include reference="4JX-0x-HzT"/>
+                                <include reference="rQx-Oe-VSj"/>
+                                <include reference="y27-Ys-hMu"/>
+                                <include reference="ARg-OY-G3r"/>
+                                <include reference="TaH-mV-2fg"/>
+                                <include reference="UhG-fE-Q1t"/>
+                                <include reference="oyS-et-BjU"/>
+                                <include reference="xhP-JI-MM4"/>
+                                <include reference="zzn-1M-uwa"/>
+                                <include reference="hqw-CW-xSh"/>
+                                <include reference="vKI-a8-ALH"/>
+                                <include reference="zwM-xh-lQh"/>
                             </mask>
                         </variation>
                     </view>
@@ -93,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="452"/>
+            <point key="canvasLocation" x="799.5" y="469"/>
         </scene>
         <!--Pay Controller-->
         <scene sceneID="x3y-Di-PMQ">
@@ -212,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thV-Gk-XMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189" y="452"/>
+            <point key="canvasLocation" x="21" y="469"/>
         </scene>
     </scenes>
 </document>
