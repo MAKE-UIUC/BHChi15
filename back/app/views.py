@@ -74,12 +74,14 @@ def get_valid_pharmacies():
         raise InvalidUsage('Invalid longitude provided', status_code=400)
     if radius is None:
         radius = 10
+    else:
+        radius = float(radius)
     inventory = Inventory.query.filter(Inventory.name == medicine_name).all()
     locations = []
     for inv in inventory:
         pharm = Pharmacy.query.filter(Pharmacy.id == inv.pharm_id).first()
         dist = haversine(pharm.latitude, pharm.longitude, latitude, longitude)
-        if dist <= radius:
+        if dist < radius:
             locations.append({'name': pharm.name, 'approx_dist': dist, 'latitude': pharm.latitude, 'longitude': pharm.longitude, 'address': pharm.address})
     return jsonify(num_locations=len(locations), locations=locations)
 
