@@ -6,7 +6,7 @@ Grab the inventory of this pharmacy.
 
 ##### Request Parameters
 
-Request body data | Value type | Value
+Request parameter | Value type | Value
 ---|---|---
 address | string | The address of this pharmacy (URL encoded)
 
@@ -14,7 +14,7 @@ address | string | The address of this pharmacy (URL encoded)
 
 This method returns a JSON object containing the following key/value pairs:
 
-Response data | Value type | Value
+Response | Value type | Value
 ---|---|---
 location | dict(string->float) | Latitude ("lat") and longitude ("lng") of this pharmacy
 hours | array(array(int, int, int)) | Array containing times this pharmacy is open. First int represents day of week (Sunday = 0), 2nd represents minutes after midnight that store opens, 3rd represents closing time.
