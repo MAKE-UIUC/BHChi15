@@ -61,3 +61,16 @@ Response | Value type | Value
 ---|---|---
 num_locations | int | The number of different pharmacies meeting the search criteria
 locations | array(dict) | An array of dictionaries containing the name, address, latitude/longitude, approximate distance of each pharmacy, as well as the name of the medication and its price
+
+# TECHNOLOGY STACK
+Venmo (payment, ios interface)
+PayPal (payment, SMS interface)
+Twilio (SMS interface)
+swift
+obj-c
+python
+flask (backend for web architecture)
+javascript
+jquery
+html/css
+restful API
