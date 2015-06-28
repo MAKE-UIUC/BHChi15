@@ -21,7 +21,7 @@ class MapController: UIViewController, MKMapViewDelegate {
 
         var parameters: [String: String] = ["medicine_name": "stuff", "latitude": "12.0", "longitude": "12.0"]
 
-        let url = NSURL(string: "http://bh1.intense.io/api/v1/users/pharmacies?medicine_name=Clarit&latitude=41.89&longitude=-87.63&radius=100")
+        let url = NSURL(string: "http://steam.intense.io/api/v1/users/pharmacies?medicine_name=Clarit&latitude=41.89&longitude=-87.63&radius=100")
 
         var pharms:String = ""
 
@@ -66,9 +66,8 @@ class MapController: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func backToSearch(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+    
+
     func createGetURL(url: String, parameters: [String: String]){
 
 
@@ -76,22 +75,38 @@ class MapController: UIViewController, MKMapViewDelegate {
 
     func annotateMap(){
 
-        let lat_list:[CLLocationDegrees] = [41.883298, 41.879911, 41.879879]
-        let lon_list:[CLLocationDegrees] = [-87.630662, -87.647013, -87.624869]
-        let pharm_name:[String] = ["CVS Pharmacy", "Walgreens", "Walgreens"]
-        let prices:[Double] = [2.95, 2.95, 3.95]
+        let lat_list:[CLLocationDegrees] = [41.883298, 41.879911, 41.879879, 41.880634, 41.880506, 41.890018]
+        let lon_list:[CLLocationDegrees] = [-87.630662, -87.647013, -87.624869,  -87.642365,  -87.626744, -87.637218]
+        let pharm_name:[String] = ["CVS Pharmacy", "Walgreens", "Walgreens", "Walmart", "Merz Downtown", "CVS"]
+        let prices:[Double] = [2.95, 2.95, 3.95, 3.45, 2.15, 2.15]
 
 
-        for var index = 0; index < 3; ++index {
+        for var index = 0; index < 6; ++index {
             let latitude:CLLocationDegrees = lat_list[index]
             let longitude:CLLocationDegrees = lon_list[index]
             var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
             var pin = MKPointAnnotation()
             pin.coordinate = location
             pin.title = pharm_name[index]
-            pin.subtitle = String(format:"%f", prices[index])
+            var price:String = "$"
+            price = price + String(format:"%f", prices[index])
+            pin.subtitle = price
             self.MapView.addAnnotation(pin)
         }
+        
+        func mapView(mapView: MKMapView!, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+
+            //get tag here
+            if(annotationView.tag == 0){
+                //Do for 0 pin
+            }
+
+            if control == annotationView.rightCalloutAccessoryView {
+                performSegueWithIdentifier("Detail", sender: self)
+            }
+        }
+
+        
 
         return
     }
