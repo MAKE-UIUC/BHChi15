@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56B598321B3F3C6C00D8AF7B"
+               BlueprintIdentifier = "56B598671B3F8B2000D8AF7B"
                BuildableName = "quickmed.app"
                BlueprintName = "quickmed"
                ReferencedContainer = "container:quickmed.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56B5984C1B3F3C6C00D8AF7B"
+               BlueprintIdentifier = "56B5987F1B3F8B2000D8AF7B"
                BuildableName = "quickmedTests.xctest"
                BlueprintName = "quickmedTests"
                ReferencedContainer = "container:quickmed.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56B5984C1B3F3C6C00D8AF7B"
+               BlueprintIdentifier = "56B5987F1B3F8B2000D8AF7B"
                BuildableName = "quickmedTests.xctest"
                BlueprintName = "quickmedTests"
                ReferencedContainer = "container:quickmed.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "56B598321B3F3C6C00D8AF7B"
+            BlueprintIdentifier = "56B598671B3F8B2000D8AF7B"
             BuildableName = "quickmed.app"
             BlueprintName = "quickmed"
             ReferencedContainer = "container:quickmed.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "56B598321B3F3C6C00D8AF7B"
+            BlueprintIdentifier = "56B598671B3F8B2000D8AF7B"
             BuildableName = "quickmed.app"
             BlueprintName = "quickmed"
             ReferencedContainer = "container:quickmed.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "56B598321B3F3C6C00D8AF7B"
+            BlueprintIdentifier = "56B598671B3F8B2000D8AF7B"
             BuildableName = "quickmed.app"
             BlueprintName = "quickmed"
             ReferencedContainer = "container:quickmed.xcodeproj">
