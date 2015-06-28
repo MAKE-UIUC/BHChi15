@@ -13,6 +13,8 @@ def get_pharmacy_inventory():
     if address is None:
         raise InvalidUsage('Invalid address provided', status_code=400)
     pharm = Pharmacy.query.filter(Pharmacy.address.like('%{}%'.format(address))).first()
+    if pharm is None:
+        raise InvalidUsage('Invalid address provided', status_code=400)
     inventory = Inventory.query.filter(Inventory.pharm_id == pharm.id).all()
     medicines = []
     for inv in inventory:
@@ -25,6 +27,8 @@ def get_pharmacy_info():
     if address is None:
         raise InvalidUsage('Invalid address provided', status_code=400)
     pharm = Pharmacy.query.filter(Pharmacy.address.like('%{}%'.format(address))).first()
+    if pharm is None:
+        raise InvalidUsage('Invalid address provided', status_code=400)
     hours_res = Hours.query.filter(Hours.pharm_id == pharm.id).all()
     hours = []
     for h in hours_res:
@@ -40,6 +44,8 @@ def get_pharmacy_present_orders():
     if address is None:
         raise InvalidUsage('Invalid address provided', status_code=400)
     pharm = Pharmacy.query.filter(Pharmacy.address.like('%{}%'.format(address))).first()
+    if pharm is None:
+        raise InvalidUsage('Invalid address provided', status_code=400)
     orders_res = Orders.query.filter(Orders.pharm_id == pharm.id).filter(Orders.fulfilled == False).all()
     orders = []
     for order in orders_res:
@@ -52,6 +58,8 @@ def get_pharmacy_past_orders():
     if address is None:
         raise InvalidUsage('Invalid address provided', status_code=400)
     pharm = Pharmacy.query.filter(Pharmacy.address.like('%{}%'.format(address))).first()
+    if pharm is None:
+        raise InvalidUsage('Invalid address provided', status_code=400)
     orders_res = Orders.query.filter(Orders.pharm_id == pharm.id).filter(Orders.fulfilled == True).all()
     orders = []
     for order in orders_res:
