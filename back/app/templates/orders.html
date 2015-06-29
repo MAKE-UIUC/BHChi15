@@ -49,9 +49,12 @@
 				<div class="st-content"><!-- this is the wrapper for the content -->
 						<!-- Top Navigation -->
 						<div class="main clearfix">
-							<div id = "topBar" style = "height: 50px; background-color: ;">
+							<div id = "topBar" style = "height: 50px;">
 							<div id="st-trigger-effects" style = "display: inline;">
-							<button data-effect="st-effect-5" style = "padding: 0 !important; background : #eaeaea;">Menu</button>
+
+								<button data-effect="st-effect-5" style = "float: left; margin-left: 40px !important; color:#2ea879; background : #eaeaea;">MENU</button>
+								<h3 id = "account" style = "float:right; padding-right: 50px; padding-top: 10px; margin: 0px;">111 S Halsted St Chicago, IL 60661 </h3>
+
 						</div>
 						</div
 							<div class="container">
@@ -83,16 +86,14 @@
 													</thead>
 													<script>
 													$.ajax({
-													        url: "http://localhost:5000/api/v1/pharmacy/presentorders?address=string",
+													        url: "http://localhost:5000/api/v1/pharmacy/presentorders?address=111%20S%20Halsted%20St",
 													        type: 'GET',
 													        dataType: 'json', // added data type
 													        success: function(res) {
-													            console.log(res);
-																			//alert(res);
 																			var length = res.num_orders;
 																			for(var i = 0; i < length; i++){
 																				var customerName = res.orders[i].customer;
-																				var medName = res.orders[i].name;
+																				var medName = res.orders[i].medicine_name;
 																				var quantity = res.orders[i].quantity;
 																				var price = res.orders[i].price;
 																				var listItem = "<tr><td>" + customerName + "</td><td>" + medName + "</td><td>" + quantity + "</td><td>" + price + '</td><td><span class="table-remove" style = "cursor: pointer;"> DONE </span></td></tr>';
@@ -163,7 +164,6 @@
 			</div><!-- /st-pusher -->
 		</div><!-- /st-container -->
 	</div> <!-- bind -->
-		<script src="js/cbpFWTabs.js"></script>
 		<script>
 			(function() {
 
@@ -328,7 +328,6 @@ $ui.find('.sb_dropdown').find('label[for="all"]').prev().bind('click',function()
 </script>
 <script src="{{url_for('static', filename='js/classie.js')}}"></script>
 <script src="{{url_for('static', filename='js/sidebarEffects.js')}}"></script>
-<script src="{{url_for('static', filename='js/stickyheader.js')}}"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 	</body>
 </html>

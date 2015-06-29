@@ -5,6 +5,11 @@ from app import app, db
 from app.models import *
 from util import haversine
 
+# URL Routing
+@app.route("/")
+def login():
+    return render_template("login.html")
+
 @app.route("/index.html")
 def index():
     return render_template("index.html")
@@ -17,6 +22,8 @@ def inventory():
 def orders():
     return render_template("orders.html")
 
+
+# API
 @app.route("/api/v1/pharmacy/inventory", methods=['GET'])
 def get_pharmacy_inventory():
     address = request.args.get('address')
