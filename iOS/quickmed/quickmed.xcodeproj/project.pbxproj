@@ -7,50 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56B598391B3F3C6C00D8AF7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B598381B3F3C6C00D8AF7B /* AppDelegate.swift */; };
-		56B5983C1B3F3C6C00D8AF7B /* quickmed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56B5983A1B3F3C6C00D8AF7B /* quickmed.xcdatamodeld */; };
-		56B5983E1B3F3C6C00D8AF7B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5983D1B3F3C6C00D8AF7B /* MasterViewController.swift */; };
-		56B598401B3F3C6C00D8AF7B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5983F1B3F3C6C00D8AF7B /* DetailViewController.swift */; };
-		56B598431B3F3C6C00D8AF7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B598411B3F3C6C00D8AF7B /* Main.storyboard */; };
-		56B598451B3F3C6C00D8AF7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B598441B3F3C6C00D8AF7B /* Images.xcassets */; };
-		56B598481B3F3C6C00D8AF7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B598461B3F3C6C00D8AF7B /* LaunchScreen.xib */; };
-		56B598541B3F3C6C00D8AF7B /* quickmedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B598531B3F3C6C00D8AF7B /* quickmedTests.swift */; };
+		56B5986E1B3F8B2000D8AF7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5986D1B3F8B2000D8AF7B /* AppDelegate.swift */; };
+		56B598711B3F8B2000D8AF7B /* quickmed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56B5986F1B3F8B2000D8AF7B /* quickmed.xcdatamodeld */; };
+		56B598731B3F8B2000D8AF7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B598721B3F8B2000D8AF7B /* ViewController.swift */; };
+		56B598761B3F8B2000D8AF7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B598741B3F8B2000D8AF7B /* Main.storyboard */; };
+		56B598781B3F8B2000D8AF7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B598771B3F8B2000D8AF7B /* Images.xcassets */; };
+		56B5987B1B3F8B2000D8AF7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B598791B3F8B2000D8AF7B /* LaunchScreen.xib */; };
+		56B598871B3F8B2000D8AF7B /* quickmedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B598861B3F8B2000D8AF7B /* quickmedTests.swift */; };
+		56B598911B3F8B9F00D8AF7B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B598901B3F8B9F00D8AF7B /* MapKit.framework */; };
+		56B598951B3FA75900D8AF7B /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B598941B3FA75900D8AF7B /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		56B5984E1B3F3C6C00D8AF7B /* PBXContainerItemProxy */ = {
+		56B598811B3F8B2000D8AF7B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 56B5982B1B3F3C6C00D8AF7B /* Project object */;
+			containerPortal = 56B598601B3F8B2000D8AF7B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 56B598321B3F3C6C00D8AF7B;
+			remoteGlobalIDString = 56B598671B3F8B2000D8AF7B;
 			remoteInfo = quickmed;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		56B598331B3F3C6C00D8AF7B /* quickmed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quickmed.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		56B598371B3F3C6C00D8AF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56B598381B3F3C6C00D8AF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56B5983B1B3F3C6C00D8AF7B /* quickmed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = quickmed.xcdatamodel; sourceTree = "<group>"; };
-		56B5983D1B3F3C6C00D8AF7B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		56B5983F1B3F3C6C00D8AF7B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		56B598421B3F3C6C00D8AF7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		56B598441B3F3C6C00D8AF7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		56B598471B3F3C6C00D8AF7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		56B5984D1B3F3C6C00D8AF7B /* quickmedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quickmedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		56B598521B3F3C6C00D8AF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56B598531B3F3C6C00D8AF7B /* quickmedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quickmedTests.swift; sourceTree = "<group>"; };
+		56B598681B3F8B2000D8AF7B /* quickmed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quickmed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B5986C1B3F8B2000D8AF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B5986D1B3F8B2000D8AF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56B598701B3F8B2000D8AF7B /* quickmed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = quickmed.xcdatamodel; sourceTree = "<group>"; };
+		56B598721B3F8B2000D8AF7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56B598751B3F8B2000D8AF7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56B598771B3F8B2000D8AF7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		56B5987A1B3F8B2000D8AF7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		56B598801B3F8B2000D8AF7B /* quickmedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quickmedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B598851B3F8B2000D8AF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B598861B3F8B2000D8AF7B /* quickmedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quickmedTests.swift; sourceTree = "<group>"; };
+		56B598901B3F8B9F00D8AF7B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		56B598941B3FA75900D8AF7B /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		56B598301B3F3C6C00D8AF7B /* Frameworks */ = {
+		56B598651B3F8B2000D8AF7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B598911B3F8B9F00D8AF7B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56B5984A1B3F3C6C00D8AF7B /* Frameworks */ = {
+		56B5987D1B3F8B2000D8AF7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,60 +63,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		56B5982A1B3F3C6C00D8AF7B = {
+		56B5985F1B3F8B2000D8AF7B = {
 			isa = PBXGroup;
 			children = (
-				56B598351B3F3C6C00D8AF7B /* quickmed */,
-				56B598501B3F3C6C00D8AF7B /* quickmedTests */,
-				56B598341B3F3C6C00D8AF7B /* Products */,
+				56B598901B3F8B9F00D8AF7B /* MapKit.framework */,
+				56B5986A1B3F8B2000D8AF7B /* quickmed */,
+				56B598831B3F8B2000D8AF7B /* quickmedTests */,
+				56B598691B3F8B2000D8AF7B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		56B598341B3F3C6C00D8AF7B /* Products */ = {
+		56B598691B3F8B2000D8AF7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56B598331B3F3C6C00D8AF7B /* quickmed.app */,
-				56B5984D1B3F3C6C00D8AF7B /* quickmedTests.xctest */,
+				56B598681B3F8B2000D8AF7B /* quickmed.app */,
+				56B598801B3F8B2000D8AF7B /* quickmedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56B598351B3F3C6C00D8AF7B /* quickmed */ = {
+		56B5986A1B3F8B2000D8AF7B /* quickmed */ = {
 			isa = PBXGroup;
 			children = (
-				56B598381B3F3C6C00D8AF7B /* AppDelegate.swift */,
-				56B5983D1B3F3C6C00D8AF7B /* MasterViewController.swift */,
-				56B5983F1B3F3C6C00D8AF7B /* DetailViewController.swift */,
-				56B598411B3F3C6C00D8AF7B /* Main.storyboard */,
-				56B598441B3F3C6C00D8AF7B /* Images.xcassets */,
-				56B598461B3F3C6C00D8AF7B /* LaunchScreen.xib */,
-				56B5983A1B3F3C6C00D8AF7B /* quickmed.xcdatamodeld */,
-				56B598361B3F3C6C00D8AF7B /* Supporting Files */,
+				56B5986D1B3F8B2000D8AF7B /* AppDelegate.swift */,
+				56B598721B3F8B2000D8AF7B /* ViewController.swift */,
+				56B598741B3F8B2000D8AF7B /* Main.storyboard */,
+				56B598941B3FA75900D8AF7B /* SearchController.swift */,
+				56B598771B3F8B2000D8AF7B /* Images.xcassets */,
+				56B598791B3F8B2000D8AF7B /* LaunchScreen.xib */,
+				56B5986F1B3F8B2000D8AF7B /* quickmed.xcdatamodeld */,
+				56B5986B1B3F8B2000D8AF7B /* Supporting Files */,
 			);
 			path = quickmed;
 			sourceTree = "<group>";
 		};
-		56B598361B3F3C6C00D8AF7B /* Supporting Files */ = {
+		56B5986B1B3F8B2000D8AF7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				56B598371B3F3C6C00D8AF7B /* Info.plist */,
+				56B5986C1B3F8B2000D8AF7B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		56B598501B3F3C6C00D8AF7B /* quickmedTests */ = {
+		56B598831B3F8B2000D8AF7B /* quickmedTests */ = {
 			isa = PBXGroup;
 			children = (
-				56B598531B3F3C6C00D8AF7B /* quickmedTests.swift */,
-				56B598511B3F3C6C00D8AF7B /* Supporting Files */,
+				56B598861B3F8B2000D8AF7B /* quickmedTests.swift */,
+				56B598841B3F8B2000D8AF7B /* Supporting Files */,
 			);
 			path = quickmedTests;
 			sourceTree = "<group>";
 		};
-		56B598511B3F3C6C00D8AF7B /* Supporting Files */ = {
+		56B598841B3F8B2000D8AF7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				56B598521B3F3C6C00D8AF7B /* Info.plist */,
+				56B598851B3F8B2000D8AF7B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -121,13 +125,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56B598321B3F3C6C00D8AF7B /* quickmed */ = {
+		56B598671B3F8B2000D8AF7B /* quickmed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56B598571B3F3C6C00D8AF7B /* Build configuration list for PBXNativeTarget "quickmed" */;
+			buildConfigurationList = 56B5988A1B3F8B2000D8AF7B /* Build configuration list for PBXNativeTarget "quickmed" */;
 			buildPhases = (
-				56B5982F1B3F3C6C00D8AF7B /* Sources */,
-				56B598301B3F3C6C00D8AF7B /* Frameworks */,
-				56B598311B3F3C6C00D8AF7B /* Resources */,
+				56B598641B3F8B2000D8AF7B /* Sources */,
+				56B598651B3F8B2000D8AF7B /* Frameworks */,
+				56B598661B3F8B2000D8AF7B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -135,46 +139,47 @@
 			);
 			name = quickmed;
 			productName = quickmed;
-			productReference = 56B598331B3F3C6C00D8AF7B /* quickmed.app */;
+			productReference = 56B598681B3F8B2000D8AF7B /* quickmed.app */;
 			productType = "com.apple.product-type.application";
 		};
-		56B5984C1B3F3C6C00D8AF7B /* quickmedTests */ = {
+		56B5987F1B3F8B2000D8AF7B /* quickmedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56B5985A1B3F3C6C00D8AF7B /* Build configuration list for PBXNativeTarget "quickmedTests" */;
+			buildConfigurationList = 56B5988D1B3F8B2000D8AF7B /* Build configuration list for PBXNativeTarget "quickmedTests" */;
 			buildPhases = (
-				56B598491B3F3C6C00D8AF7B /* Sources */,
-				56B5984A1B3F3C6C00D8AF7B /* Frameworks */,
-				56B5984B1B3F3C6C00D8AF7B /* Resources */,
+				56B5987C1B3F8B2000D8AF7B /* Sources */,
+				56B5987D1B3F8B2000D8AF7B /* Frameworks */,
+				56B5987E1B3F8B2000D8AF7B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56B5984F1B3F3C6C00D8AF7B /* PBXTargetDependency */,
+				56B598821B3F8B2000D8AF7B /* PBXTargetDependency */,
 			);
 			name = quickmedTests;
 			productName = quickmedTests;
-			productReference = 56B5984D1B3F3C6C00D8AF7B /* quickmedTests.xctest */;
+			productReference = 56B598801B3F8B2000D8AF7B /* quickmedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		56B5982B1B3F3C6C00D8AF7B /* Project object */ = {
+		56B598601B3F8B2000D8AF7B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = MAKE;
 				TargetAttributes = {
-					56B598321B3F3C6C00D8AF7B = {
+					56B598671B3F8B2000D8AF7B = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = C2MNEVAM4L;
 					};
-					56B5984C1B3F3C6C00D8AF7B = {
+					56B5987F1B3F8B2000D8AF7B = {
 						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 56B598321B3F3C6C00D8AF7B;
+						TestTargetID = 56B598671B3F8B2000D8AF7B;
 					};
 				};
 			};
-			buildConfigurationList = 56B5982E1B3F3C6C00D8AF7B /* Build configuration list for PBXProject "quickmed" */;
+			buildConfigurationList = 56B598631B3F8B2000D8AF7B /* Build configuration list for PBXProject "quickmed" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -182,29 +187,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 56B5982A1B3F3C6C00D8AF7B;
-			productRefGroup = 56B598341B3F3C6C00D8AF7B /* Products */;
+			mainGroup = 56B5985F1B3F8B2000D8AF7B;
+			productRefGroup = 56B598691B3F8B2000D8AF7B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56B598321B3F3C6C00D8AF7B /* quickmed */,
-				56B5984C1B3F3C6C00D8AF7B /* quickmedTests */,
+				56B598671B3F8B2000D8AF7B /* quickmed */,
+				56B5987F1B3F8B2000D8AF7B /* quickmedTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		56B598311B3F3C6C00D8AF7B /* Resources */ = {
+		56B598661B3F8B2000D8AF7B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B598431B3F3C6C00D8AF7B /* Main.storyboard in Resources */,
-				56B598481B3F3C6C00D8AF7B /* LaunchScreen.xib in Resources */,
-				56B598451B3F3C6C00D8AF7B /* Images.xcassets in Resources */,
+				56B598761B3F8B2000D8AF7B /* Main.storyboard in Resources */,
+				56B5987B1B3F8B2000D8AF7B /* LaunchScreen.xib in Resources */,
+				56B598781B3F8B2000D8AF7B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56B5984B1B3F3C6C00D8AF7B /* Resources */ = {
+		56B5987E1B3F8B2000D8AF7B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,48 +219,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		56B5982F1B3F3C6C00D8AF7B /* Sources */ = {
+		56B598641B3F8B2000D8AF7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B5983C1B3F3C6C00D8AF7B /* quickmed.xcdatamodeld in Sources */,
-				56B598391B3F3C6C00D8AF7B /* AppDelegate.swift in Sources */,
-				56B5983E1B3F3C6C00D8AF7B /* MasterViewController.swift in Sources */,
-				56B598401B3F3C6C00D8AF7B /* DetailViewController.swift in Sources */,
+				56B598731B3F8B2000D8AF7B /* ViewController.swift in Sources */,
+				56B598711B3F8B2000D8AF7B /* quickmed.xcdatamodeld in Sources */,
+				56B5986E1B3F8B2000D8AF7B /* AppDelegate.swift in Sources */,
+				56B598951B3FA75900D8AF7B /* SearchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56B598491B3F3C6C00D8AF7B /* Sources */ = {
+		56B5987C1B3F8B2000D8AF7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B598541B3F3C6C00D8AF7B /* quickmedTests.swift in Sources */,
+				56B598871B3F8B2000D8AF7B /* quickmedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		56B5984F1B3F3C6C00D8AF7B /* PBXTargetDependency */ = {
+		56B598821B3F8B2000D8AF7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56B598321B3F3C6C00D8AF7B /* quickmed */;
-			targetProxy = 56B5984E1B3F3C6C00D8AF7B /* PBXContainerItemProxy */;
+			target = 56B598671B3F8B2000D8AF7B /* quickmed */;
+			targetProxy = 56B598811B3F8B2000D8AF7B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		56B598411B3F3C6C00D8AF7B /* Main.storyboard */ = {
+		56B598741B3F8B2000D8AF7B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				56B598421B3F3C6C00D8AF7B /* Base */,
+				56B598751B3F8B2000D8AF7B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		56B598461B3F3C6C00D8AF7B /* LaunchScreen.xib */ = {
+		56B598791B3F8B2000D8AF7B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				56B598471B3F3C6C00D8AF7B /* Base */,
+				56B5987A1B3F8B2000D8AF7B /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -263,7 +268,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		56B598551B3F3C6C00D8AF7B /* Debug */ = {
+		56B598881B3F8B2000D8AF7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -307,7 +312,7 @@
 			};
 			name = Debug;
 		};
-		56B598561B3F3C6C00D8AF7B /* Release */ = {
+		56B598891B3F8B2000D8AF7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -344,27 +349,33 @@
 			};
 			name = Release;
 		};
-		56B598581B3F3C6C00D8AF7B /* Debug */ = {
+		56B5988B1B3F8B2000D8AF7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = quickmed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		56B598591B3F3C6C00D8AF7B /* Release */ = {
+		56B5988C1B3F8B2000D8AF7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = quickmed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
-		56B5985B1B3F3C6C00D8AF7B /* Debug */ = {
+		56B5988E1B3F8B2000D8AF7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -383,7 +394,7 @@
 			};
 			name = Debug;
 		};
-		56B5985C1B3F3C6C00D8AF7B /* Release */ = {
+		56B5988F1B3F8B2000D8AF7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -401,45 +412,45 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56B5982E1B3F3C6C00D8AF7B /* Build configuration list for PBXProject "quickmed" */ = {
+		56B598631B3F8B2000D8AF7B /* Build configuration list for PBXProject "quickmed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56B598551B3F3C6C00D8AF7B /* Debug */,
-				56B598561B3F3C6C00D8AF7B /* Release */,
+				56B598881B3F8B2000D8AF7B /* Debug */,
+				56B598891B3F8B2000D8AF7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56B598571B3F3C6C00D8AF7B /* Build configuration list for PBXNativeTarget "quickmed" */ = {
+		56B5988A1B3F8B2000D8AF7B /* Build configuration list for PBXNativeTarget "quickmed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56B598581B3F3C6C00D8AF7B /* Debug */,
-				56B598591B3F3C6C00D8AF7B /* Release */,
+				56B5988B1B3F8B2000D8AF7B /* Debug */,
+				56B5988C1B3F8B2000D8AF7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		56B5985A1B3F3C6C00D8AF7B /* Build configuration list for PBXNativeTarget "quickmedTests" */ = {
+		56B5988D1B3F8B2000D8AF7B /* Build configuration list for PBXNativeTarget "quickmedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56B5985B1B3F3C6C00D8AF7B /* Debug */,
-				56B5985C1B3F3C6C00D8AF7B /* Release */,
+				56B5988E1B3F8B2000D8AF7B /* Debug */,
+				56B5988F1B3F8B2000D8AF7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		56B5983A1B3F3C6C00D8AF7B /* quickmed.xcdatamodeld */ = {
+		56B5986F1B3F8B2000D8AF7B /* quickmed.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				56B5983B1B3F3C6C00D8AF7B /* quickmed.xcdatamodel */,
+				56B598701B3F8B2000D8AF7B /* quickmed.xcdatamodel */,
 			);
-			currentVersion = 56B5983B1B3F3C6C00D8AF7B /* quickmed.xcdatamodel */;
+			currentVersion = 56B598701B3F8B2000D8AF7B /* quickmed.xcdatamodel */;
 			path = quickmed.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 56B5982B1B3F3C6C00D8AF7B /* Project object */;
+	rootObject = 56B598601B3F8B2000D8AF7B /* Project object */;
 }
