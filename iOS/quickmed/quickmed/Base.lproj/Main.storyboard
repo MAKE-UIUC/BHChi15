@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="799.5" y="469"/>
         </scene>
-        <!--Pay Controller-->
+        <!--PayController-->
         <scene sceneID="x3y-Di-PMQ">
             <objects>
-                <viewController id="wRe-Jy-Hkg" customClass="PayController" customModule="quickmed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PayController" modalTransitionStyle="flipHorizontal" id="wRe-Jy-Hkg" customClass="PayController" customModule="quickmed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cy0-EQ-5zG"/>
                         <viewControllerLayoutGuide type="bottom" id="dnx-e1-wiO"/>
@@ -115,13 +115,50 @@
                     <view key="view" contentMode="scaleToFill" id="BLq-Bh-NEi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuR-DD-5H4">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" label="PayController"/>
+                        <constraints>
+                            <constraint firstItem="dnx-e1-wiO" firstAttribute="top" secondItem="zuR-DD-5H4" secondAttribute="bottom" id="C7B-0f-tv9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zuR-DD-5H4" secondAttribute="trailing" constant="-16" id="OHS-6D-zwH"/>
+                            <constraint firstItem="zuR-DD-5H4" firstAttribute="leading" secondItem="BLq-Bh-NEi" secondAttribute="leadingMargin" constant="-16" id="dmE-w0-eJ4"/>
+                            <constraint firstItem="zuR-DD-5H4" firstAttribute="top" secondItem="cy0-EQ-5zG" secondAttribute="bottom" id="eOR-rY-uNF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zuR-DD-5H4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="OHS-6D-zwH"/>
+                                <exclude reference="dmE-w0-eJ4"/>
+                                <exclude reference="eOR-rY-uNF"/>
+                                <exclude reference="C7B-0f-tv9"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zuR-DD-5H4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="OHS-6D-zwH"/>
+                                <include reference="dmE-w0-eJ4"/>
+                                <include reference="eOR-rY-uNF"/>
+                                <include reference="C7B-0f-tv9"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="payview" destination="zuR-DD-5H4" id="cPS-kg-qD5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UD-5s-9AO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1536" y="469"/>
+            <point key="canvasLocation" x="1537.5" y="480"/>
         </scene>
         <!--SearchController-->
         <scene sceneID="dnI-vs-wzw">

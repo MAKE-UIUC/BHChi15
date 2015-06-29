@@ -10,9 +10,14 @@ import UIKit
 
 class PayController: UIViewController {
 
+    @IBOutlet weak var payview: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        Venmo.startWithAppId("app_id", secret:"your_secret", name:"app_name")
+        let paypath = "https://venmo.com/?txn=pay&recipients=quick%40medsnear.me&amount=2.95&note=Prepayment%20for%20your%20meds&audience=public"
+        let req = NSURL(string: paypath)
+        let request = NSURLRequest(URL: req!)
+
+        self.payview.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
