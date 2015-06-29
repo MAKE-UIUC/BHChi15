@@ -1,0 +1,369 @@
+/* Default tab style */
+
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'stroke7pixeden';
+	src:url('../fonts/stroke7pixeden/stroke7pixeden.eot?u58ytb');
+	src:url('../fonts/stroke7pixeden/stroke7pixeden.eot?#iefixu58ytb') format('embedded-opentype'),
+		url('../fonts/stroke7pixeden/stroke7pixeden.woff?u58ytb') format('woff'),
+		url('../fonts/stroke7pixeden/stroke7pixeden.ttf?u58ytb') format('truetype'),
+		url('../fonts/stroke7pixeden/stroke7pixeden.svg?u58ytb#stroke7pixeden') format('svg');
+}
+
+.tabs {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	font-weight: 300;
+	font-size: 1.25em;
+}
+
+/* Nav */
+.tabs nav {
+	text-align: center;
+}
+
+.tabs nav ul {
+	position: relative;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+	padding: 0;
+
+	list-style: none;
+	-ms-box-orient: horizontal;
+	-ms-box-pack: center;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.tabs nav ul li {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	text-align: center;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.tabs nav a {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2.5;
+}
+
+.tabs nav a span {
+	vertical-align: middle;
+	font-size: 0.75em;
+}
+
+.tabs nav li.tab-current a {
+	color: #74777b;
+}
+
+.tabs nav a:focus {
+	outline: none;
+}
+
+/* Icons */
+.icon::before {
+	z-index: 10;
+	display: inline-block;
+	margin: 0 0.4em 0 0;
+	vertical-align: middle;
+	text-transform: none;
+	font-weight: normal;
+	font-variant: normal;
+	font-size: 1.3em;
+	font-family: 'stroke7pixeden', 'linecons';
+	line-height: 1;
+	speak: none;
+	-webkit-backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-female:before {
+	content: "\f182";
+}
+.icon-male:before {
+	content: "\f183";
+}
+.icon-arrow-left:before {
+	content: "\e032";
+}
+.icon-arrow-left-2:before {
+	content: "\e034";
+}
+.icon-arrow-left-3:before {
+	content: "\e036";
+}
+.icon-arrow-left-4:before {
+	content: "\e038";
+}
+.icon-arrow-right:before {
+	content: "\e035";
+}
+.icon-arrow-right-2:before {
+	content: "\e037";
+}
+.icon-arrow-right-3:before {
+	content: "\e039";
+}
+.icon-arrow-right-4:before {
+	content: "\e033";
+}
+
+.icon-phone:before {
+	content: "\e000";
+}
+.icon-news:before {
+	content: "\e001";
+}
+.icon-photo:before {
+	content: "\e002";
+}
+.icon-shop:before {
+	content: "\e003";
+}
+.icon-wallet:before {
+	content: "\e004";
+}
+.icon-t-shirt:before {
+	content: "\e005";
+}
+.icon-heart:before {
+	content: "\e006";
+}
+.icon-cloud:before {
+	content: "\e007";
+}
+.icon-display:before {
+	content: "\e008";
+}
+.icon-diamond:before {
+	content: "\e009";
+}
+.icon-banknote:before {
+	content: "\e00a";
+}
+.icon-data:before {
+	content: "\e00b";
+}
+.icon-music:before {
+	content: "\e00c";
+}
+.icon-location:before {
+	content: "\e00d";
+}
+.icon-star:before {
+	content: "\e00e";
+}
+.icon-tv:before {
+	content: "\e00f";
+}
+.icon-eye:before {
+	content: "\e010";
+}
+.icon-megaphone:before {
+	content: "\e011";
+}
+.icon-study:before {
+	content: "\e012";
+}
+.icon-bubble:before {
+	content: "\e013";
+}
+.icon-sound:before {
+	content: "\e014";
+}
+.icon-video:before {
+	content: "\e015";
+}
+.icon-stack:before {
+	content: "\e016";
+}
+.icon-lab:before {
+	content: "\e017";
+}
+.icon-food:before {
+	content: "\e018";
+}
+.icon-cup:before {
+	content: "\e019";
+}
+.icon-trash:before {
+	content: "\e01a";
+}
+.icon-user:before {
+	content: "\e01b";
+}
+.icon-key:before {
+	content: "\e01c";
+}
+.icon-fire:before {
+	content: "\e01d";
+}
+.icon-clip:before {
+	content: "\e01e";
+}
+.icon-mail:before {
+	content: "\e01f";
+}
+.icon-search:before {
+	content: "\e020";
+}
+.icon-settings:before {
+	content: "\e021";
+}
+.icon-like:before {
+	content: "\e022";
+}
+.icon-calendar:before {
+	content: "\e023";
+}
+.icon-camera:before {
+	content: "\e024";
+}
+.icon-tag:before {
+	content: "\e025";
+}
+.icon-note:before {
+	content: "\e026";
+}
+.icon-clock:before {
+	content: "\e027";
+}
+.icon-lock:before {
+	content: "\e028";
+}
+.icon-vynil:before {
+	content: "\e029";
+}
+.icon-truck:before {
+	content: "\e02a";
+}
+.icon-paperplane:before {
+	content: "\e02b";
+}
+.icon-bulb:before {
+	content: "\e02c";
+}
+.icon-pen:before {
+	content: "\e02d";
+}
+.icon-params:before {
+	content: "\e02e";
+}
+.icon-world:before {
+	content: "\e02f";
+}
+.icon-upload::before {
+	content: "\e68a";
+}
+.icon-tools::before {
+	content: "\e60a";
+}
+.icon-plane::before {
+	content: "\e625";
+}
+.icon-joy::before {
+	content: "\e6a4";
+}
+.icon-plug::before {
+	content: "\e69a";
+}
+.icon-home::before {
+	content: "\e648";
+}
+.icon-gift::before {
+	content: "\e652";
+}
+.icon-display::before {
+	content: "\e65e";
+}
+.icon-date::before {
+	content: "\e660";
+}
+.icon-config::before {
+	content: "\e666";
+}
+.icon-coffee::before {
+	content: "\e669";
+}
+.icon-camera::before {
+	content: "\e66f";
+}
+.icon-box::before {
+	content: "\e674";
+}
+
+/* Content */
+.content-wrap {
+	position: relative;
+	height: 800px;
+	overflow-y: scroll;
+}
+
+.content-wrap section {
+	display: none;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 1200px;
+	text-align: center;
+}
+
+.content-wrap section.content-current {
+	display: block;
+}
+
+.content-wrap section p {
+	margin: 0;
+	padding: 0.75em 0;
+	color: rgba(40,44,42,0.05);
+	font-weight: 900;
+	font-size: 4em;
+	line-height: 1;
+}
+
+/* Fallback */
+.no-js .content-wrap section {
+	display: block;
+	padding-bottom: 2em;
+	border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+
+.no-flexbox nav ul {
+	display: block;
+}
+
+.no-flexbox nav ul li {
+	min-width: 15%;
+	display: inline-block;
+}
+
+@media screen and (max-width: 58em) {
+	.tabs nav a.icon span {
+		display: none;
+	}
+	.tabs nav a:before {
+		margin-right: 0;
+	}
+}
