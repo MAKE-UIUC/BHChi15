@@ -5,6 +5,7 @@ QuickMed brings availability of over-the-counter meds into the 21st century. Alt
 
 ##iOS App
 Our mobile application takes your location and automatically aggregates the closest clinics that have your required medication. Information is accurate and up-to-date so that you can rest easy!
+
 ![iOS Search](https://raw.githubusercontent.com/MAKE-UIUC/BHChi15/master/iOS/mkt/iOS%20Search%20Page.png)
 ![iOS Map](https://raw.githubusercontent.com/MAKE-UIUC/BHChi15/master/iOS/mkt/iOS%20Map.png)
 
