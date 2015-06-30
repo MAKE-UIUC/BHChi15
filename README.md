@@ -29,7 +29,7 @@ This REST API lays the groundwork for a centralized pharmaceutical record-keepin
 
 
 ##Check Us Out
-You can check out our technology stack here: https://github.com/MAKE-UIUC/BHChi15/blob/master/endpoints.md
+You can check out our technology stack here: https://github.com/MAKE-UIUC/BHChi15/blob/master/endpoints.md#technology-stack
 
 and our repo here: https://github.com/MAKE-UIUC/BHChi15
 
