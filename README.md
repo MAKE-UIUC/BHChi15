@@ -22,6 +22,8 @@ Another huge problem in the pharmaceutical industry is data and record keeping. 
 ##Backend / API
 These tools are all built on a robust REST api framework, the documentation for which you can see here: https://github.com/MAKE-UIUC/BHChi15/blob/master/endpoints.md
 
+![Web Sidebar] (https://cloud.githubusercontent.com/assets/7456865/8440602/de082754-1f38-11e5-9d32-49ffc1a6be46.png)
+
 This REST API lays the groundwork for a centralized pharmaceutical record-keeping system whose information can be used to prepare for disease outbreaks and predict trends in health.
 
 
