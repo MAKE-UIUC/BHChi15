@@ -19,10 +19,11 @@ We also recognize that a majority of people in the world do not have stable inte
 ##Web App
 Another huge problem in the pharmaceutical industry is data and record keeping. Our web infrastructure allows pharmacies to easily track their stores in real time, and also receives orders for medications from our mobile apps.
 
+![Web Sidebar] (https://cloud.githubusercontent.com/assets/7456865/8440602/de082754-1f38-11e5-9d32-49ffc1a6be46.png)
+![Web Edit](https://cloud.githubusercontent.com/assets/7456865/8440652/2625f1ce-1f39-11e5-9c21-84843ca4966e.png)
+
 ##Backend / API
 These tools are all built on a robust REST api framework, the documentation for which you can see here: https://github.com/MAKE-UIUC/BHChi15/blob/master/endpoints.md
-
-![Web Sidebar] (https://cloud.githubusercontent.com/assets/7456865/8440602/de082754-1f38-11e5-9d32-49ffc1a6be46.png)
 
 This REST API lays the groundwork for a centralized pharmaceutical record-keeping system whose information can be used to prepare for disease outbreaks and predict trends in health.
 
