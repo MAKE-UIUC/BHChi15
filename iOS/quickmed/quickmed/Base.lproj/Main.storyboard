@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="492" width="368" height="50"/>
+                                    <rect key="frame" x="16" y="550" width="368" height="34"/>
                                 </variation>
                                 <connections>
                                     <segue destination="wRe-Jy-Hkg" kind="show" id="Ye6-ka-pc0"/>
@@ -61,18 +61,18 @@
                                 <exclude reference="K4z-t5-ywt"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="4JX-0x-HzT"/>
-                                <exclude reference="rQx-Oe-VSj"/>
-                                <exclude reference="y27-Ys-hMu"/>
+                                <exclude reference="hqw-CW-xSh"/>
+                                <exclude reference="vKI-a8-ALH"/>
+                                <exclude reference="zwM-xh-lQh"/>
                                 <exclude reference="ARg-OY-G3r"/>
                                 <exclude reference="TaH-mV-2fg"/>
                                 <exclude reference="UhG-fE-Q1t"/>
                                 <exclude reference="oyS-et-BjU"/>
                                 <exclude reference="xhP-JI-MM4"/>
                                 <exclude reference="zzn-1M-uwa"/>
-                                <exclude reference="hqw-CW-xSh"/>
-                                <exclude reference="vKI-a8-ALH"/>
-                                <exclude reference="zwM-xh-lQh"/>
+                                <exclude reference="4JX-0x-HzT"/>
+                                <exclude reference="rQx-Oe-VSj"/>
+                                <exclude reference="y27-Ys-hMu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -81,18 +81,18 @@
                                 <include reference="K4z-t5-ywt"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="4JX-0x-HzT"/>
-                                <include reference="rQx-Oe-VSj"/>
-                                <include reference="y27-Ys-hMu"/>
+                                <include reference="hqw-CW-xSh"/>
+                                <include reference="vKI-a8-ALH"/>
+                                <include reference="zwM-xh-lQh"/>
                                 <include reference="ARg-OY-G3r"/>
                                 <include reference="TaH-mV-2fg"/>
                                 <include reference="UhG-fE-Q1t"/>
                                 <include reference="oyS-et-BjU"/>
                                 <include reference="xhP-JI-MM4"/>
                                 <include reference="zzn-1M-uwa"/>
-                                <include reference="hqw-CW-xSh"/>
-                                <include reference="vKI-a8-ALH"/>
-                                <include reference="zwM-xh-lQh"/>
+                                <include reference="4JX-0x-HzT"/>
+                                <include reference="rQx-Oe-VSj"/>
+                                <include reference="y27-Ys-hMu"/>
                             </mask>
                         </variation>
                     </view>
@@ -134,10 +134,10 @@
                                 <exclude reference="zuR-DD-5H4"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="C7B-0f-tv9"/>
                                 <exclude reference="OHS-6D-zwH"/>
                                 <exclude reference="dmE-w0-eJ4"/>
                                 <exclude reference="eOR-rY-uNF"/>
-                                <exclude reference="C7B-0f-tv9"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -145,10 +145,10 @@
                                 <include reference="zuR-DD-5H4"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="C7B-0f-tv9"/>
                                 <include reference="OHS-6D-zwH"/>
                                 <include reference="dmE-w0-eJ4"/>
                                 <include reference="eOR-rY-uNF"/>
-                                <include reference="C7B-0f-tv9"/>
                             </mask>
                         </variation>
                     </view>

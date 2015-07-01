@@ -49,11 +49,19 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Braintree.framework'
+  install_framework 'CMDQueryStringSerialization.framework'
+  install_framework 'SSKeychain.framework'
   install_framework 'SwiftyJSON.framework'
+  install_framework 'VENCore.framework'
+  install_framework 'Venmo_iOS_SDK.framework'
   install_framework 'coinbase_official.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Braintree.framework'
+  install_framework 'CMDQueryStringSerialization.framework'
+  install_framework 'SSKeychain.framework'
   install_framework 'SwiftyJSON.framework'
+  install_framework 'VENCore.framework'
+  install_framework 'Venmo_iOS_SDK.framework'
   install_framework 'coinbase_official.framework'
 fi

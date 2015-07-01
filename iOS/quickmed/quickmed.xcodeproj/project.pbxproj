@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		56B5986E1B3F8B2000D8AF7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5986D1B3F8B2000D8AF7B /* AppDelegate.swift */; };
 		56B598711B3F8B2000D8AF7B /* quickmed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56B5986F1B3F8B2000D8AF7B /* quickmed.xcdatamodeld */; };
-		56B598731B3F8B2000D8AF7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B598721B3F8B2000D8AF7B /* ViewController.swift */; };
+		56B598731B3F8B2000D8AF7B /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B598721B3F8B2000D8AF7B /* MapController.swift */; };
 		56B598761B3F8B2000D8AF7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B598741B3F8B2000D8AF7B /* Main.storyboard */; };
 		56B598781B3F8B2000D8AF7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B598771B3F8B2000D8AF7B /* Images.xcassets */; };
 		56B5987B1B3F8B2000D8AF7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B598791B3F8B2000D8AF7B /* LaunchScreen.xib */; };
@@ -35,7 +35,7 @@
 		56B5986C1B3F8B2000D8AF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56B5986D1B3F8B2000D8AF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B598701B3F8B2000D8AF7B /* quickmed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = quickmed.xcdatamodel; sourceTree = "<group>"; };
-		56B598721B3F8B2000D8AF7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56B598721B3F8B2000D8AF7B /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		56B598751B3F8B2000D8AF7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56B598771B3F8B2000D8AF7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		56B5987A1B3F8B2000D8AF7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			children = (
 				56B5986D1B3F8B2000D8AF7B /* AppDelegate.swift */,
 				56B598961B3FDA7300D8AF7B /* PayController.swift */,
-				56B598721B3F8B2000D8AF7B /* ViewController.swift */,
+				56B598721B3F8B2000D8AF7B /* MapController.swift */,
 				56B598741B3F8B2000D8AF7B /* Main.storyboard */,
 				56B598941B3FA75900D8AF7B /* SearchController.swift */,
 				56B598771B3F8B2000D8AF7B /* Images.xcassets */,
@@ -301,7 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B598731B3F8B2000D8AF7B /* ViewController.swift in Sources */,
+				56B598731B3F8B2000D8AF7B /* MapController.swift in Sources */,
 				56B598711B3F8B2000D8AF7B /* quickmed.xcdatamodeld in Sources */,
 				56B5986E1B3F8B2000D8AF7B /* AppDelegate.swift in Sources */,
 				56B598971B3FDA7300D8AF7B /* PayController.swift in Sources */,
